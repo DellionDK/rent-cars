@@ -1,0 +1,28 @@
+.main_block .rent img {
+	margin-right: 26px !important;
+}
+
+.main_block > p {
+	font-size: 23px !important;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	.navbar-brand img {
+		width: 300px !important;
+	}
+	.info_right .but_wrap a.order {
+		padding: 10px 35px;
+	}
+}
+
+@media (max-width: 767px) {
+	.slide_bg .info .sq_bg p {
+    	font-size: 13px !important;
+	}
+	body .main_block .rent img {
+	    margin-right: 0 !important;
+	}
+	body .main_block > p {
+    	font-size: 16px !important;
+	}
+}

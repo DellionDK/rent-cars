@@ -1,0 +1,5097 @@
+@font-face {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://pay.fondy.eu/icons/dist/fonts/inter-regular.woff2) format("woff2"), url(https://pay.fondy.eu/icons/dist/fonts/inter-regular.woff) format("woff")
+}
+
+@font-face {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://pay.fondy.eu/icons/dist/fonts/inter-medium.woff2) format("woff2"), url(https://pay.fondy.eu/icons/dist/fonts/inter-medium.woff) format("woff")
+}
+
+@font-face {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(https://pay.fondy.eu/icons/dist/fonts/inter-semibold.woff2) format("woff2"), url(https://pay.fondy.eu/icons/dist/fonts/inter-semibold.woff) format("woff")
+}
+
+@font-face {
+    font-family: Card Number;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://pay.fondy.eu/icons/dist/fonts/card-number.woff) format("woff")
+}
+
+@font-face {
+    font-family: Cvv;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://pay.fondy.eu/icons/dist/fonts/cvv.woff) format("woff")
+}
+
+#f *, #f :after, #f :before {
+    box-sizing: border-box
+}
+
+#f [tabindex="-1"]:focus:not(:focus-visible) {
+    outline: 0 !important
+}
+
+#f h1, #f h2, #f h3, #f h4, #f h5, #f h6 {
+    margin-top: 0;
+    margin-bottom: .5rem
+}
+
+#f p {
+    margin: .5rem 0
+}
+
+#f ul {
+    margin-top: 0;
+    margin-bottom: 1rem
+}
+
+#f a {
+    font-weight: 600;
+    color: var(--fondy-link_color);
+    text-decoration: none;
+    background-color: transparent
+}
+
+#f a:hover {
+    text-decoration: underline
+}
+
+#f a:focus {
+    outline: 0
+}
+
+#f a:not([href]), #f a:not([href]):hover {
+    color: inherit;
+    text-decoration: none
+}
+
+#f img {
+    border-style: none
+}
+
+#f img, #f svg {
+    vertical-align: middle
+}
+
+#f svg {
+    overflow: hidden
+}
+
+#f table {
+    border-collapse: collapse
+}
+
+#f th {
+    text-align: inherit
+}
+
+#f label {
+    display: inline-block;
+    margin-bottom: 0
+}
+
+#f button {
+    border-radius: 0
+}
+
+#f button:focus {
+    outline: 0
+}
+
+#f button, #f input, #f select {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit
+}
+
+#f button, #f input {
+    overflow: visible
+}
+
+#f button, #f select {
+    text-transform: none
+}
+
+#f [role=button] {
+    cursor: pointer
+}
+
+#f select {
+    word-wrap: normal
+}
+
+#f [type=button], #f [type=submit], #f button {
+    -webkit-appearance: button
+}
+
+#f [type=button]:not(:disabled), #f [type=submit]:not(:disabled), #f button:not(:disabled) {
+    cursor: pointer
+}
+
+#f [type=button]::-moz-focus-inner, #f [type=submit]::-moz-focus-inner, #f button::-moz-focus-inner {
+    padding: 0;
+    border-style: none
+}
+
+#f input[type=checkbox], #f input[type=radio] {
+    box-sizing: border-box;
+    padding: 0
+}
+
+#f [type=number]::-webkit-inner-spin-button, #f [type=number]::-webkit-outer-spin-button {
+    height: auto
+}
+
+#f ::-webkit-file-upload-button {
+    font: inherit;
+    -webkit-appearance: button
+}
+
+#f .f-fade {
+    transition: opacity .15s linear
+}
+
+#f .f-fade:not(.f-show) {
+    opacity: 0
+}
+
+#f .f-collapse-enter-active, #f .f-collapse-leave-active {
+    max-height: 100vh;
+    overflow: hidden;
+    transition: max-height .3s ease-in-out
+}
+
+#f .f-collapse-enter, #f .f-collapse-leave-to {
+    max-height: 0;
+    overflow: hidden
+}
+
+#f .f-fade-enter-enter-active {
+    transition: opacity .3s ease-in-out
+}
+
+#f .f-fade-enter-enter {
+    opacity: 0
+}
+
+#f .f-fade-enter-leave-active {
+    display: none
+}
+
+#f .f-fade-enter-active, #f .f-fade-leave-active {
+    transition: opacity .3s ease-in-out
+}
+
+#f .f-fade-enter, #f .f-fade-leave-to {
+    opacity: 0
+}
+
+#f .f-slide-fade-enter-active {
+    transition: all .3s ease
+}
+
+#f .f-slide-fade-leave-active {
+    transition: all .8s cubic-bezier(1, .5, .8, 1)
+}
+
+#f .f-slide-fade-enter, #f .f-slide-fade-leave-to {
+    opacity: 0;
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px)
+}
+
+#f .f-datepicker-zoom-in-down-enter-active, #f .f-datepicker-zoom-in-down-leave-active {
+    opacity: 1;
+    transition: opacity .3s cubic-bezier(.23, 1, .32, 1), -webkit-transform .3s cubic-bezier(.23, 1, .32, 1);
+    transition: transform .3s cubic-bezier(.23, 1, .32, 1), opacity .3s cubic-bezier(.23, 1, .32, 1);
+    transition: transform .3s cubic-bezier(.23, 1, .32, 1), opacity .3s cubic-bezier(.23, 1, .32, 1), -webkit-transform .3s cubic-bezier(.23, 1, .32, 1);
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: center top;
+    transform-origin: center top
+}
+
+#f .f-datepicker-zoom-in-down-enter, #f .f-datepicker-zoom-in-down-leave-to {
+    opacity: 0;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0)
+}
+
+#f .f-title {
+    margin: 0;
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-align: center;
+    color: var(--fondy-title_color)
+}
+
+#f .f-title-lg {
+    font-size: 1.5rem;
+    font-weight: 600
+}
+
+#f .f-tooltip {
+    position: absolute;
+    z-index: 1070;
+    display: block;
+    margin: 0;
+    word-wrap: break-word;
+    outline: 0
+}
+
+#f .f-tooltip .f-tooltip-arrow {
+    position: absolute;
+    display: block;
+    width: .625rem;
+    height: .4375rem;
+    margin: 0 .5rem
+}
+
+#f .f-tooltip .f-tooltip-arrow:before {
+    position: absolute;
+    content: "";
+    border-color: transparent;
+    border-style: solid
+}
+
+#f .f-tooltip.noninteractive {
+    pointer-events: none
+}
+
+#f .f-tooltip.f-tooltip-auto[x-placement^=left] .f-tooltip-arrow, #f .f-tooltip.f-tooltip-auto[x-placement^=right] .f-tooltip-arrow, #f .f-tooltip.f-tooltip-left .f-tooltip-arrow, #f .f-tooltip.f-tooltip-right .f-tooltip-arrow {
+    margin: .5rem 0
+}
+
+#f .f-tooltip-auto[x-placement^=top], #f .f-tooltip-top {
+    padding: .4375rem 0
+}
+
+#f .f-tooltip-auto[x-placement^=top] .f-tooltip-arrow, #f .f-tooltip-top .f-tooltip-arrow {
+    bottom: 0
+}
+
+#f .f-tooltip-auto[x-placement^=top] .f-tooltip-arrow:before, #f .f-tooltip-top .f-tooltip-arrow:before {
+    top: 0;
+    border-width: .4375rem .3125rem 0
+}
+
+#f .f-tooltip-auto[x-placement^=right], #f .f-tooltip-right {
+    padding: 0 .4375rem
+}
+
+#f .f-tooltip-auto[x-placement^=right] .f-tooltip-arrow, #f .f-tooltip-right .f-tooltip-arrow {
+    left: 0;
+    width: .4375rem;
+    height: .625rem
+}
+
+#f .f-tooltip-auto[x-placement^=right] .f-tooltip-arrow:before, #f .f-tooltip-right .f-tooltip-arrow:before {
+    right: 0;
+    border-width: .3125rem .4375rem .3125rem 0
+}
+
+#f .f-tooltip-auto[x-placement^=bottom], #f .f-tooltip-bottom {
+    padding: .4375rem 0
+}
+
+#f .f-tooltip-auto[x-placement^=bottom] .f-tooltip-arrow, #f .f-tooltip-bottom .f-tooltip-arrow {
+    top: 0
+}
+
+#f .f-tooltip-auto[x-placement^=bottom] .f-tooltip-arrow:before, #f .f-tooltip-bottom .f-tooltip-arrow:before {
+    bottom: 0;
+    border-width: 0 .3125rem .4375rem
+}
+
+#f .f-tooltip-auto[x-placement^=left], #f .f-tooltip-left {
+    padding: 0 .4375rem
+}
+
+#f .f-tooltip-auto[x-placement^=left] .f-tooltip-arrow, #f .f-tooltip-left .f-tooltip-arrow {
+    right: 0;
+    width: .4375rem;
+    height: .625rem
+}
+
+#f .f-tooltip-auto[x-placement^=left] .f-tooltip-arrow:before, #f .f-tooltip-left .f-tooltip-arrow:before {
+    left: 0;
+    border-width: .3125rem 0 .3125rem .4375rem
+}
+
+#f .f-tooltip-inner {
+    display: flex;
+    width: 100%;
+    max-width: 18.75rem;
+    padding: 1rem;
+    font-weight: 500;
+    border-radius: .5rem
+}
+
+#f .f-tooltip-inner .f-svg {
+    margin: .0625rem .5rem 0 0
+}
+
+#f .f-tooltip-default.f-tooltip-auto[x-placement^=top] .f-tooltip-arrow:before, #f .f-tooltip-default.f-tooltip-top .f-tooltip-arrow:before {
+    border-top-color: var(--fondy-tooltip_default_bg)
+}
+
+#f .f-tooltip-default.f-tooltip-auto[x-placement^=right] .f-tooltip-arrow:before, #f .f-tooltip-default.f-tooltip-right .f-tooltip-arrow:before {
+    border-right-color: var(--fondy-tooltip_default_bg)
+}
+
+#f .f-tooltip-default.f-tooltip-auto[x-placement^=bottom] .f-tooltip-arrow:before, #f .f-tooltip-default.f-tooltip-bottom .f-tooltip-arrow:before {
+    border-bottom-color: var(--fondy-tooltip_default_bg)
+}
+
+#f .f-tooltip-default.f-tooltip-auto[x-placement^=left] .f-tooltip-arrow:before, #f .f-tooltip-default.f-tooltip-left .f-tooltip-arrow:before {
+    border-left-color: var(--fondy-tooltip_default_bg)
+}
+
+#f .f-tooltip-default .f-tooltip-inner {
+    background-color: var(--fondy-tooltip_default_bg);
+    color: var(--fondy-tooltip_default_color);
+    border-radius: .375rem;
+    opacity: .95
+}
+
+#f .f-tooltip-secondary.f-tooltip-auto[x-placement^=top] .f-tooltip-arrow:before, #f .f-tooltip-secondary.f-tooltip-top .f-tooltip-arrow:before {
+    border-top-color: var(--fondy-tooltip_secondary_bg)
+}
+
+#f .f-tooltip-secondary.f-tooltip-auto[x-placement^=right] .f-tooltip-arrow:before, #f .f-tooltip-secondary.f-tooltip-right .f-tooltip-arrow:before {
+    border-right-color: var(--fondy-tooltip_secondary_bg)
+}
+
+#f .f-tooltip-secondary.f-tooltip-auto[x-placement^=bottom] .f-tooltip-arrow:before, #f .f-tooltip-secondary.f-tooltip-bottom .f-tooltip-arrow:before {
+    border-bottom-color: var(--fondy-tooltip_secondary_bg)
+}
+
+#f .f-tooltip-secondary.f-tooltip-auto[x-placement^=left] .f-tooltip-arrow:before, #f .f-tooltip-secondary.f-tooltip-left .f-tooltip-arrow:before {
+    border-left-color: var(--fondy-tooltip_secondary_bg)
+}
+
+#f .f-tooltip-secondary .f-tooltip-inner {
+    background-color: var(--fondy-tooltip_secondary_bg);
+    box-shadow: 0 8px 32px hsla(var(--fondy-tooltip_secondary_shadow-h), var(--fondy-tooltip_secondary_shadow-s), var(--fondy-tooltip_secondary_shadow-l), .5)
+}
+
+#f .f-form-group {
+    position: relative;
+    margin-bottom: 1rem
+}
+
+#f .f-form-group-inner {
+    position: relative;
+    display: flex;
+    flex-direction: column
+}
+
+#f .f-form-group-inner-select {
+    background-color: var(--fondy-input_bg);
+    border-radius: .5rem
+}
+
+#f .f-form-control {
+    display: block;
+    width: 100%;
+    height: 3.5rem;
+    padding: 1.625rem .75rem .5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--fondy-input_color);
+    background-color: var(--fondy-input_bg);
+    border: 1px solid var(--fondy-input_border);
+    border-radius: .5rem;
+    transition: all .15s ease-in-out
+}
+
+#f .f-form-control:-webkit-autofill {
+    -webkit-text-fill-color: var(--fondy-input_color)
+}
+
+#f .f-form-control:-webkit-autofill, #f .f-form-control:-webkit-autofill:active, #f .f-form-control:-webkit-autofill:focus, #f .f-form-control:-webkit-autofill:hover {
+    -webkit-transition: background-color 99999s;
+    transition: background-color 99999s
+}
+
+#f .f-form-control:-webkit-autofill:first-line {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--fondy-input_color)
+}
+
+#f .f-form-control:hover {
+    background-color: var(--fondy-input_hover_bg);
+    border-color: var(--fondy-input_hover_border)
+}
+
+#f .f-form-control:focus {
+    z-index: 1;
+    border-color: var(--fondy-input_focus_border);
+    border-width: .09375rem;
+    outline: 0
+}
+
+#f .f-disabled > .f-form-control, #f .f-form-control[disabled] {
+    color: var(--fondy-input_readonly_color);
+    border-color: var(--fondy-input_border);
+    -webkit-text-fill-color: var(--fondy-input_readonly_color);
+    opacity: 1
+}
+
+#f .f-form-control:-webkit-autofill + .f-control-label-p {
+    -webkit-transform: translateY(-8px) scale(.75);
+    transform: translateY(-8px) scale(.75)
+}
+
+#f .f-has-error .f-form-control {
+    color: var(--fondy-input_error_color);
+    border: 2px solid var(--fondy-input_error_border)
+}
+
+#f .f-has-error .f-form-control:focus {
+    border-color: var(--fondy-input_focus_border);
+    border-width: .09375rem
+}
+
+#f .f-form-control[type=date], #f .f-form-control[type=tel], #f .f-form-control[type=text] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none
+}
+
+#f .f-control-sm {
+    height: 2.75rem;
+    padding: .9375rem .75rem .3125rem
+}
+
+#f .f-form-item-sm + .f-control-label-p {
+    top: .75rem
+}
+
+#f .f-form-control-select-wrapper {
+    position: relative
+}
+
+#f .f-form-control-select {
+    padding-right: 1.5rem;
+    background-color: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none
+}
+
+#f .f-form-control-select::-ms-expand {
+    display: none
+}
+
+#f .f-form-control-select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 var(--fondy-input_color)
+}
+
+#f .f-form-control-select:hover {
+    background-color: inherit
+}
+
+#f .f-form-control-select[disabled] {
+    opacity: 1
+}
+
+#f .f-form-control-select > option {
+    color: initial
+}
+
+#f .f-form-control-select + .f-svg {
+    position: absolute;
+    top: 50%;
+    right: .5rem;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%)
+}
+
+#f .f-form-control-description {
+    margin-bottom: .5rem;
+    font-size: .875rem
+}
+
+#f .f-control-label {
+    font-size: 1rem;
+    color: var(--fondy-label_color)
+}
+
+#f .f-control-label-p {
+    position: absolute;
+    top: 1.0625rem;
+    right: 0;
+    left: .75rem;
+    transition: -webkit-transform .15s ease-in-out;
+    transition: transform .15s ease-in-out;
+    transition: transform .15s ease-in-out, -webkit-transform .15s ease-in-out;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+#f .f-control-label-p.f-control-label-active {
+    z-index: 1;
+    -webkit-transform: translateY(-8px) scale(.75);
+    transform: translateY(-8px) scale(.75)
+}
+
+#f .f-form-group-amount .f-control-label-p {
+    padding-right: 2.5rem
+}
+
+#f .f-control-label-hover {
+    color: var(--fondy-label_hover_color)
+}
+
+#f .f-control-label-focused {
+    color: var(--fondy-label_focus_color)
+}
+
+#f .f-disabled > .f-control-label, #f .f-form-control[disabled] + .f-control-label {
+    color: var(--fondy-label_color)
+}
+
+#f .f-error {
+    margin-top: .25rem;
+    font-weight: 500;
+    color: var(--fondy-text_error_color)
+}
+
+#f .f-form-control-prepend {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    color: var(--fondy-input_prepend_color)
+}
+
+#f .f-form-control-prepend + div .f-form-control {
+    padding-left: 2.5rem
+}
+
+#f .f-form-control-prepend ~ .f-control-label-p {
+    left: 2.5rem
+}
+
+#f .f-input-group {
+    background-color: var(--fondy-input_bg);
+    border-radius: .5rem
+}
+
+#f .f-input-group .f-form-group {
+    margin: 0
+}
+
+#f .f-input-group .f-form-group:after {
+    position: absolute;
+    top: .5rem;
+    right: 0;
+    bottom: .5rem;
+    width: .0625rem;
+    content: "";
+    background-color: var(--fondy-input_border)
+}
+
+#f .f-input-group .f-form-group.f-has-error:after, #f .f-input-group .f-form-group:last-child:after {
+    display: none
+}
+
+#f .f-btn {
+    position: relative;
+    display: inline-block;
+    height: 2.75rem;
+    min-height: 2.75rem;
+    padding: .625rem 2rem;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    text-align: center;
+    background: none;
+    border: none;
+    border-radius: .5rem;
+    transition: all .15s ease-in-out
+}
+
+#f .f-btn span {
+    position: relative;
+    z-index: 1
+}
+
+#f .f-btn:before {
+    bottom: .125rem;
+    left: 5%;
+    width: 90%;
+    height: 2rem;
+    border-radius: 1rem
+}
+
+#f .f-btn:after, #f .f-btn:before {
+    position: absolute;
+    z-index: 0;
+    content: "";
+    transition: all .15s ease-in-out
+}
+
+#f .f-btn:after {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: .5rem
+}
+
+#f .f-btn:focus, #f .f-btn:hover {
+    text-decoration: none;
+    -webkit-transform: translateY(-.125rem);
+    transform: translateY(-.125rem)
+}
+
+#f .f-btn:active {
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+}
+
+#f .f-btn:focus {
+    outline: 0
+}
+
+#f .f-btn :not(:disabled):not(.disabled) {
+    cursor: pointer
+}
+
+#f .f-btn-success {
+    color: var(--fondy-btn_success_color)
+}
+
+#f .f-btn-success:before {
+    box-shadow: 0 .625rem 1.5625rem hsla(var(--fondy-btn_success_shadow-h), var(--fondy-btn_success_shadow-s), var(--fondy-btn_success_shadow-l), .6)
+}
+
+#f .f-btn-success:after {
+    background-color: var(--fondy-btn_success_bg)
+}
+
+#f .f-btn-success:focus, #f .f-btn-success:hover {
+    color: var(--fondy-btn_success_color)
+}
+
+#f .f-btn-success:focus:before, #f .f-btn-success:hover:before {
+    box-shadow: 0 .625rem 1.5625rem hsla(var(--fondy-btn_success_shadow-h), var(--fondy-btn_success_shadow-s), var(--fondy-btn_success_shadow-l), .6)
+}
+
+#f .f-btn-success:focus:after, #f .f-btn-success:hover:after {
+    background-color: hsl(var(--fondy-btn_success_bg-h), var(--fondy-btn_success_bg-s), calc(var(--fondy-btn_success_bg-l) - 10%))
+}
+
+#f .f-btn-success:active {
+    color: var(--fondy-btn_success_color)
+}
+
+#f .f-btn-success:active:before {
+    box-shadow: 0 .625rem 1.5625rem hsla(var(--fondy-btn_success_shadow-h), var(--fondy-btn_success_shadow-s), var(--fondy-btn_success_shadow-l), .6)
+}
+
+#f .f-btn-success:active:after {
+    background-color: hsl(var(--fondy-btn_success_bg-h), var(--fondy-btn_success_bg-s), calc(var(--fondy-btn_success_bg-l) - 20%))
+}
+
+#f .f-btn-success.disabled, #f .f-btn-success:disabled {
+    color: var(--fondy-btn_disabled_color)
+}
+
+#f .f-btn-success.disabled:before, #f .f-btn-success:disabled:before {
+    box-shadow: none
+}
+
+#f .f-btn-success.disabled:after, #f .f-btn-success:disabled:after {
+    background: var(--fondy-btn_disabled_bg)
+}
+
+#f .f-theme-dark .f-btn-success:before {
+    box-shadow: 0 .625rem 1.5625rem rgba(0, 0, 0, .6)
+}
+
+#f .f-btn-success-bg-lighten:focus:after, #f .f-btn-success-bg-lighten:hover:after {
+    background-color: hsl(var(--fondy-btn_success_bg-h), var(--fondy-btn_success_bg-s), calc(var(--fondy-btn_success_bg-l) + 10%))
+}
+
+#f .f-btn-success-bg-lighten:active:after {
+    background-color: hsl(var(--fondy-btn_success_bg-h), var(--fondy-btn_success_bg-s), calc(var(--fondy-btn_success_bg-l) + 20%))
+}
+
+#f .f-btn-success-bg-lighten.disabled, #f .f-btn-success-bg-lighten:disabled {
+    color: var(--fondy-btn_disabled_color)
+}
+
+#f .f-btn-success-bg-lighten.disabled:before, #f .f-btn-success-bg-lighten:disabled:before {
+    box-shadow: none
+}
+
+#f .f-btn-success-bg-lighten.disabled:after, #f .f-btn-success-bg-lighten:disabled:after {
+    background: var(--fondy-btn_disabled_bg)
+}
+
+#f .f-btn-success-gradient:active:after, #f .f-btn-success-gradient:after, #f .f-btn-success-gradient:focus:after, #f .f-btn-success-gradient:hover:after {
+    background: linear-gradient(130deg, hsl(var(--fondy-btn_success_bg-h), calc(var(--fondy-btn_success_bg-s) + 15%), calc(var(--fondy-btn_success_bg-l) - 5%)) 11%, hsl(var(--fondy-btn_success_bg-h), calc(var(--fondy-btn_success_bg-s) + 10%), calc(var(--fondy-btn_success_bg-l) - 15%)) 22%, hsl(var(--fondy-btn_success_bg-h), calc(var(--fondy-btn_success_bg-s) + 10%), calc(var(--fondy-btn_success_bg-l) - 15%)) 32%, hsl(var(--fondy-btn_success_bg-h), calc(var(--fondy-btn_success_bg-s) + 15%), calc(var(--fondy-btn_success_bg-l) - 15%)) 33%, hsl(var(--fondy-btn_success_bg-h), calc(var(--fondy-btn_success_bg-s) + 10%), calc(var(--fondy-btn_success_bg-l) - 25%)) 55%, hsl(var(--fondy-btn_success_bg-h), calc(var(--fondy-btn_success_bg-s) + 10%), calc(var(--fondy-btn_success_bg-l) - 25%)) 65%, hsl(var(--fondy-btn_success_bg-h), calc(var(--fondy-btn_success_bg-s) + 15%), calc(var(--fondy-btn_success_bg-l) - 25%)) 66%, hsl(var(--fondy-btn_success_bg-h), calc(var(--fondy-btn_success_bg-s) + 10%), calc(var(--fondy-btn_success_bg-l) - 35%)) 88%);
+    background-position: 0 0;
+    background-size: 300% 300%
+}
+
+#f .f-btn-success-gradient:focus:after, #f .f-btn-success-gradient:hover:after {
+    background-position: 50% 50%
+}
+
+#f .f-btn-success-gradient:active:after {
+    background-position: 100% 100%
+}
+
+#f .f-btn-success-gradient.disabled, #f .f-btn-success-gradient:disabled {
+    color: var(--fondy-btn_disabled_color)
+}
+
+#f .f-btn-success-gradient.disabled:before, #f .f-btn-success-gradient:disabled:before {
+    box-shadow: none
+}
+
+#f .f-btn-success-gradient.disabled:after, #f .f-btn-success-gradient:disabled:after {
+    background: var(--fondy-btn_disabled_bg)
+}
+
+#f .f-btn-success-gradient-custom:active:after, #f .f-btn-success-gradient-custom:after, #f .f-btn-success-gradient-custom:focus:after, #f .f-btn-success-gradient-custom:hover:after {
+    background: var(--fondy-btn_success_gradient_custom);
+    background-repeat: no-repeat
+}
+
+#f .f-btn-success-gradient-custom:focus:after, #f .f-btn-success-gradient-custom:hover:after {
+    background-position-x: -25px
+}
+
+#f .f-btn-success-gradient-custom:active:after {
+    background-position-x: -50px
+}
+
+#f .f-btn-success-gradient-custom.disabled, #f .f-btn-success-gradient-custom:disabled {
+    color: var(--fondy-btn_disabled_color)
+}
+
+#f .f-btn-success-gradient-custom.disabled:before, #f .f-btn-success-gradient-custom:disabled:before {
+    box-shadow: none
+}
+
+#f .f-btn-success-gradient-custom.disabled:after, #f .f-btn-success-gradient-custom:disabled:after {
+    background: var(--fondy-btn_disabled_bg)
+}
+
+#f .f-btn-default {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--fondy-btn_default_color)
+}
+
+#f .f-btn-default:after {
+    background-color: var(--fondy-btn_default_bg)
+}
+
+#f .f-btn-default:focus, #f .f-btn-default:hover {
+    color: var(--fondy-btn_default_hover_color)
+}
+
+#f .f-btn-default:focus:before, #f .f-btn-default:hover:before {
+    box-shadow: 0 .625rem 1.5625rem hsla(var(--fondy-btn_default_hover_shadow-h), var(--fondy-btn_default_hover_shadow-s), var(--fondy-btn_default_hover_shadow-l), .6)
+}
+
+#f .f-btn-default:focus:after, #f .f-btn-default:hover:after {
+    background-color: var(--fondy-btn_default_hover_bg)
+}
+
+#f .f-btn-default:active {
+    color: var(--fondy-btn_default_active_color)
+}
+
+#f .f-btn-default:active:before {
+    box-shadow: 0 .625rem 1.5625rem hsla(var(--fondy-btn_default_active_shadow-h), var(--fondy-btn_default_active_shadow-s), var(--fondy-btn_default_active_shadow-l), .6)
+}
+
+#f .f-btn-default:active:after {
+    background-color: var(--fondy-btn_default_active_bg)
+}
+
+#f .f-btn-default.disabled, #f .f-btn-default:disabled {
+    color: var(--fondy-btn_disabled_color)
+}
+
+#f .f-btn-default.disabled:before, #f .f-btn-default:disabled:before {
+    box-shadow: none
+}
+
+#f .f-btn-default.disabled:after, #f .f-btn-default:disabled:after {
+    background: var(--fondy-btn_disabled_bg)
+}
+
+#f .f-btn-secondary {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--fondy-btn_secondary_color)
+}
+
+#f .f-btn-secondary:after {
+    background-color: var(--fondy-btn_secondary_bg)
+}
+
+#f .f-btn-secondary:focus, #f .f-btn-secondary:hover {
+    color: var(--fondy-btn_secondary_hover_color)
+}
+
+#f .f-btn-secondary:focus:before, #f .f-btn-secondary:hover:before {
+    box-shadow: 0 .625rem 1.5625rem hsla(var(--fondy-btn_secondary_hover_shadow-h), var(--fondy-btn_secondary_hover_shadow-s), var(--fondy-btn_secondary_hover_shadow-l), .6)
+}
+
+#f .f-btn-secondary:focus:after, #f .f-btn-secondary:hover:after {
+    background-color: var(--fondy-btn_secondary_hover_bg)
+}
+
+#f .f-btn-secondary:active {
+    color: var(--fondy-btn_secondary_active_color)
+}
+
+#f .f-btn-secondary:active:before {
+    box-shadow: 0 .625rem 1.5625rem hsla(var(--fondy-btn_secondary_active_shadow-h), var(--fondy-btn_secondary_active_shadow-s), var(--fondy-btn_secondary_active_shadow-l), .6)
+}
+
+#f .f-btn-secondary:active:after {
+    background-color: var(--fondy-btn_secondary_active_bg)
+}
+
+#f .f-btn-secondary.disabled, #f .f-btn-secondary:disabled {
+    color: var(--fondy-btn_disabled_color)
+}
+
+#f .f-btn-secondary.disabled:before, #f .f-btn-secondary:disabled:before {
+    box-shadow: none
+}
+
+#f .f-btn-secondary.disabled:after, #f .f-btn-secondary:disabled:after {
+    background: var(--fondy-btn_disabled_bg)
+}
+
+#f .f-btn-light {
+    color: var(--fondy-btn_light_color)
+}
+
+#f .f-btn-light:after {
+    background-color: var(--fondy-btn_light_bg)
+}
+
+#f .f-btn-light:focus:after, #f .f-btn-light:hover:after {
+    background-color: hsl(var(--fondy-btn_light_bg-h), var(--fondy-btn_light_bg-s), calc(var(--fondy-btn_light_bg-l) - 10%))
+}
+
+#f .f-btn-light:active:after {
+    background-color: hsl(var(--fondy-btn_light_bg-h), var(--fondy-btn_light_bg-s), calc(var(--fondy-btn_light_bg-l) - 20%))
+}
+
+#f .f-btn-light.disabled, #f .f-btn-light:disabled {
+    color: var(--fondy-btn_disabled_color)
+}
+
+#f .f-btn-light.disabled:before, #f .f-btn-light:disabled:before {
+    box-shadow: none
+}
+
+#f .f-btn-light.disabled:after, #f .f-btn-light:disabled:after {
+    background: var(--fondy-btn_disabled_bg)
+}
+
+#f .f-btn-dark {
+    color: var(--fondy-btn_dark_color)
+}
+
+#f .f-btn-dark:after {
+    background-color: var(--fondy-btn_dark_bg)
+}
+
+#f .f-btn-dark:focus:after, #f .f-btn-dark:hover:after {
+    background-color: hsl(var(--fondy-btn_dark_bg-h), var(--fondy-btn_dark_bg-s), calc(var(--fondy-btn_dark_bg-l) + 10%))
+}
+
+#f .f-btn-dark:active:after {
+    background-color: hsl(var(--fondy-btn_dark_bg-h), var(--fondy-btn_dark_bg-s), calc(var(--fondy-btn_dark_bg-l) + 20%))
+}
+
+#f .f-btn-dark.disabled, #f .f-btn-dark:disabled {
+    color: var(--fondy-btn_disabled_color)
+}
+
+#f .f-btn-dark.disabled:before, #f .f-btn-dark:disabled:before {
+    box-shadow: none
+}
+
+#f .f-btn-dark.disabled:after, #f .f-btn-dark:disabled:after {
+    background: var(--fondy-btn_disabled_bg)
+}
+
+#f .f-btn-outline {
+    font-size: .875rem;
+    font-weight: 500;
+    color: var(--fondy-btn_outline_color)
+}
+
+#f .f-btn-outline:after {
+    background-color: var(--fondy-btn_outline_bg);
+    border: 1px solid var(--fondy-btn_outline_border)
+}
+
+#f .f-btn-outline:focus, #f .f-btn-outline:hover {
+    color: var(--fondy-btn_outline_hover_color)
+}
+
+#f .f-btn-outline:focus:after, #f .f-btn-outline:hover:after {
+    background-color: var(--fondy-btn_outline_hover_bg);
+    border: 1px solid var(--fondy-btn_outline_hover_border)
+}
+
+#f .f-btn-outline:active {
+    color: var(--fondy-btn_outline_active_color)
+}
+
+#f .f-btn-outline:active:after {
+    background-color: var(--fondy-btn_outline_active_bg);
+    border: 1px solid var(--fondy-btn_outline_active_border)
+}
+
+#f .f-btn-outline.disabled, #f .f-btn-outline:disabled {
+    color: var(--fondy-btn_disabled_color)
+}
+
+#f .f-btn-outline.disabled:before, #f .f-btn-outline:disabled:before {
+    box-shadow: none
+}
+
+#f .f-btn-outline.disabled:after, #f .f-btn-outline:disabled:after {
+    background: var(--fondy-btn_disabled_bg)
+}
+
+#f .f-btn-block {
+    display: block;
+    width: 100%
+}
+
+#f .f-btn-lg {
+    height: 3.5rem;
+    min-height: 3.5rem;
+    padding: 1rem 2rem
+}
+
+#f .f-btn-link {
+    text-align: left;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0
+}
+
+#f .f-btn-link-default {
+    color: var(--fondy-btn_link_default_color)
+}
+
+#f .f-btn-link-default:focus, #f .f-btn-link-default:hover {
+    color: var(--fondy-btn_link_default_hover_color)
+}
+
+#f .f-btn-link-default:active {
+    color: var(--fondy-btn_link_default_active_color)
+}
+
+#f .f-btn-link-secondary {
+    color: var(--fondy-btn_link_secondary_color)
+}
+
+#f .f-btn-link-secondary:focus, #f .f-btn-link-secondary:hover {
+    color: var(--fondy-btn_link_secondary_hover_color)
+}
+
+#f .f-btn-link-secondary:active {
+    color: var(--fondy-btn_link_secondary_active_color)
+}
+
+html .f-modal, html .f-modal-open {
+    overflow: hidden
+}
+
+html .f-modal-open .f-modal {
+    overflow-x: hidden;
+    overflow-y: auto
+}
+
+html .f-modal-scrollbar-measure {
+    position: absolute;
+    top: -9999px;
+    width: 50px;
+    height: 50px;
+    overflow: scroll
+}
+
+#f .f-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    width: 100%;
+    height: 100%;
+    outline: 0;
+    transition-duration: .3s
+}
+
+#f .f-modal.f-fade .f-modal-dialog {
+    transition: -webkit-transform .3s ease-out;
+    transition: transform .3s ease-out;
+    transition: transform .3s ease-out, -webkit-transform .3s ease-out;
+    -webkit-transform: translate3d(0, 25%, 0);
+    transform: translate3d(0, 25%, 0)
+}
+
+#f .f-modal.f-show .f-modal-dialog {
+    -webkit-transform: none;
+    transform: none
+}
+
+#f .f-modal .f-modal.modal-static .f-modal-dialog {
+    -webkit-transform: scale(1.02);
+    transform: scale(1.02)
+}
+
+#f .f-modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 0;
+    pointer-events: none
+}
+
+#f .f-modal-dialog-scrollable {
+    max-height: calc(100% - 4rem)
+}
+
+#f .f-modal-dialog-scrollable .f-modal-content {
+    overflow: hidden
+}
+
+body {
+    background: #1c1f22;
+}
+
+#f .f-modal-dialog-scrollable .f-modal-body {
+    overflow-y: auto
+}
+
+#f .f-modal-dialog-centered {
+    display: flex;
+    align-items: flex-end;
+    min-height: 100%
+}
+
+#f .f-modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1.25rem 0 0;
+    margin-top: 4rem;
+    font-size: .875rem;
+    color: var(--fondy-modal_content_color);
+    pointer-events: auto;
+    background-color: var(--fondy-modal_content_bg);
+    background-clip: padding-box;
+    border-radius: .75rem .75rem 0 0;
+    outline: 0;
+    box-shadow: 0 20px 30px rgba(57, 64, 75, .3)
+}
+
+#f .f-modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1040;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--fondy-modal_backdrop_bg);
+    opacity: .7
+}
+
+#f .f-modal-backdrop.f-fade {
+    opacity: 0
+}
+
+#f .f-modal-backdrop.f-show {
+    opacity: .7
+}
+
+#f .f-modal-header {
+    position: relative;
+    padding: 0 1.25rem 1rem
+}
+
+#f .f-modal-header .f-close {
+    position: absolute;
+    top: -5rem;
+    right: .25rem;
+    padding: 1rem;
+    font-size: 2rem
+}
+
+#f .f-modal-title {
+    margin: 0;
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 0;
+    color: var(--fondy-modal_title_color)
+}
+
+#f .f-modal-title svg {
+    margin: -1rem 0
+}
+
+#f .f-modal-body {
+    position: relative;
+    flex: 1 1 auto;
+    padding: 0 1.25rem 1.25rem;
+    line-height: 1.5
+}
+
+#f .f-modal-footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1.25rem 1.25rem
+}
+
+@media (max-width: 374.98px) {
+    #f .modal-fullscreen-ss-down {
+        width: 100vw;
+        max-width: none;
+        height: 100%;
+        margin: 0
+    }
+
+    #f .modal-fullscreen-ss-down .f-modal-content {
+        height: 100%;
+        border: 0;
+        border-radius: 0
+    }
+
+    #f .modal-fullscreen-ss-down .f-modal-header {
+        border-radius: 0
+    }
+
+    #f .modal-fullscreen-ss-down .f-modal-body {
+        overflow-y: auto
+    }
+
+    #f .modal-fullscreen-ss-down .f-modal-footer {
+        border-radius: 0
+    }
+}
+
+@media (max-width: 575.98px) {
+    #f .modal-fullscreen-sm-down {
+        width: 100vw;
+        max-width: none;
+        height: 100%;
+        margin: 0
+    }
+
+    #f .modal-fullscreen-sm-down .f-modal-content {
+        height: 100%;
+        border: 0;
+        border-radius: 0
+    }
+
+    #f .modal-fullscreen-sm-down .f-modal-header {
+        border-radius: 0
+    }
+
+    #f .modal-fullscreen-sm-down .f-modal-body {
+        overflow-y: auto
+    }
+
+    #f .modal-fullscreen-sm-down .f-modal-footer {
+        border-radius: 0
+    }
+}
+
+@media (max-width: 767.98px) {
+    #f .modal-fullscreen-md-down {
+        width: 100vw;
+        max-width: none;
+        height: 100%;
+        margin: 0
+    }
+
+    #f .modal-fullscreen-md-down .f-modal-content {
+        height: 100%;
+        border: 0;
+        border-radius: 0
+    }
+
+    #f .modal-fullscreen-md-down .f-modal-header {
+        border-radius: 0
+    }
+
+    #f .modal-fullscreen-md-down .f-modal-body {
+        overflow-y: auto
+    }
+
+    #f .modal-fullscreen-md-down .f-modal-footer {
+        border-radius: 0
+    }
+}
+
+@media (max-width: 991.98px) {
+    #f .modal-fullscreen-lg-down {
+        width: 100vw;
+        max-width: none;
+        height: 100%;
+        margin: 0
+    }
+
+    #f .modal-fullscreen-lg-down .f-modal-content {
+        height: 100%;
+        border: 0;
+        border-radius: 0
+    }
+
+    #f .modal-fullscreen-lg-down .f-modal-header {
+        border-radius: 0
+    }
+
+    #f .modal-fullscreen-lg-down .f-modal-body {
+        overflow-y: auto
+    }
+
+    #f .modal-fullscreen-lg-down .f-modal-footer {
+        border-radius: 0
+    }
+}
+
+@media (max-width: 1199.98px) {
+    #f .modal-fullscreen-xl-down {
+        width: 100vw;
+        max-width: none;
+        height: 100%;
+        margin: 0
+    }
+
+    #f .modal-fullscreen-xl-down .f-modal-content {
+        height: 100%;
+        border: 0;
+        border-radius: 0
+    }
+
+    #f .modal-fullscreen-xl-down .f-modal-header {
+        border-radius: 0
+    }
+
+    #f .modal-fullscreen-xl-down .f-modal-body {
+        overflow-y: auto
+    }
+
+    #f .modal-fullscreen-xl-down .f-modal-footer {
+        border-radius: 0
+    }
+}
+
+#f .modal-fullscreen {
+    width: 100vw;
+    max-width: none;
+    height: 100%;
+    margin: 0
+}
+
+#f .modal-fullscreen .f-modal-content {
+    height: 100%;
+    border: 0;
+    border-radius: 0
+}
+
+#f .modal-fullscreen .f-modal-header {
+    border-radius: 0
+}
+
+#f .modal-fullscreen .f-modal-body {
+    overflow-y: auto
+}
+
+#f .modal-fullscreen .f-modal-footer {
+    border-radius: 0
+}
+
+#f .f-close {
+    padding: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1;
+    color: var(--fondy-close_color);
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    border-radius: .5rem;
+    opacity: 1
+}
+
+#f .f-close:hover {
+    text-decoration: none
+}
+
+#f .f-close:focus, #f .f-close:hover {
+    outline: 0;
+    opacity: .75
+}
+
+#f .f-close.disabled, #f .f-close:disabled {
+    pointer-events: none
+}
+
+#f .f-checkbox {
+    position: absolute;
+    z-index: 1;
+    width: 1.25rem;
+    opacity: 0
+}
+
+#f .f-checkbox:checked + .f-checkbox-label:before {
+    border: none
+}
+
+#f .f-checkbox:checked + .f-checkbox-label:after {
+    opacity: 1
+}
+
+#f .f-checkbox-label {
+    position: relative;
+    left: -.1875rem;
+    padding: .1875rem .1875rem .1875rem 2.0625rem;
+    font-size: 1rem;
+    cursor: pointer
+}
+
+#f .f-checkbox-label:before {
+    position: absolute;
+    top: .25rem;
+    left: .1875rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    content: "";
+    border-style: solid;
+    border-width: .09375rem;
+    border-radius: .25rem;
+    transition: background-color .15s ease-in-out
+}
+
+#f .f-checkbox-label:after {
+    position: absolute;
+    top: .5625rem;
+    left: .5rem;
+    width: .625rem;
+    height: .4375rem;
+    content: "";
+    background: transparent;
+    border-style: solid;
+    border-width: .125rem;
+    border-top: none;
+    border-right: none;
+    opacity: 0;
+    transition: opacity .15s ease-in-out;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg)
+}
+
+#f .f-checkbox-label:hover:after {
+    opacity: 1
+}
+
+#f .f-form-item-sm > .f-checkbox-label {
+    font-size: .75rem;
+    line-height: 1.375rem
+}
+
+#f .f-checkbox-default + .f-checkbox-label {
+    color: var(--fondy-label_color)
+}
+
+#f .f-checkbox-default + .f-checkbox-label:before {
+    background-color: var(--fondy-input_bg);
+    border-color: var(--fondy-checkbox_default_border)
+}
+
+#f .f-has-error .f-checkbox-default + .f-checkbox-label:before {
+    border-color: var(--fondy-input_error_border)
+}
+
+#f .f-checkbox-default + .f-checkbox-label:hover:before {
+    background-color: var(--fondy-checkbox_default_hover_bg);
+    border-color: var(--fondy-checkbox_default_hover_border)
+}
+
+#f .f-checkbox-default + .f-checkbox-label:hover:after {
+    border-color: var(--fondy-checkbox_default_hover_color)
+}
+
+#f .f-checkbox-default:checked + .f-checkbox-label:before {
+    background-color: var(--fondy-checkbox_default_checked_bg)
+}
+
+#f .f-checkbox-default:checked + .f-checkbox-label:after {
+    border-color: var(--fondy-checkbox_default_checked_color)
+}
+
+#f .f-checkbox-default[disabled] + .f-checkbox-label {
+    cursor: default
+}
+
+#f .f-checkbox-default[disabled] + .f-checkbox-label:before {
+    background-color: var(--fondy-input_bg);
+    border-color: var(--fondy-checkbox_default_border)
+}
+
+#f .f-checkbox-default[disabled] + .f-checkbox-label:after {
+    opacity: 0
+}
+
+#f .f-checkbox-secondary + .f-checkbox-label {
+    color: var(--fondy-checkbox_secondary_label_color)
+}
+
+#f .f-checkbox-secondary + .f-checkbox-label:before {
+    background-color: var(--fondy-input_bg);
+    border-color: var(--fondy-checkbox_secondary_border)
+}
+
+#f .f-has-error .f-checkbox-secondary + .f-checkbox-label:before {
+    border-color: var(--fondy-input_error_border)
+}
+
+#f .f-checkbox-secondary + .f-checkbox-label:hover:before {
+    background-color: var(--fondy-checkbox_secondary_hover_bg);
+    border-color: var(--fondy-checkbox_secondary_hover_border)
+}
+
+#f .f-checkbox-secondary + .f-checkbox-label:hover:after {
+    border-color: var(--fondy-checkbox_secondary_hover_color)
+}
+
+#f .f-checkbox-secondary:checked + .f-checkbox-label:before {
+    background-color: var(--fondy-checkbox_default_checked_color)
+}
+
+#f .f-checkbox-secondary:checked + .f-checkbox-label:after {
+    border-color: var(--fondy-checkbox_secondary_checked_color)
+}
+
+#f .f-checkbox-secondary[disabled] + .f-checkbox-label {
+    cursor: default
+}
+
+#f .f-checkbox-secondary[disabled] + .f-checkbox-label:before {
+    background-color: var(--fondy-input_bg);
+    border-color: var(--fondy-checkbox_secondary_border)
+}
+
+#f .f-checkbox-secondary[disabled] + .f-checkbox-label:after {
+    opacity: 0
+}
+
+#f .f-input-group, #f .f-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -.5rem;
+    margin-left: -.5rem
+}
+
+#f .f-input-group, #f .f-no-gutters {
+    margin-right: 0;
+    margin-left: 0
+}
+
+#f .f-input-group > .f-col, #f .f-input-group > [class*=f-col-], #f .f-no-gutters > .f-col, #f .f-no-gutters > [class*=f-col-] {
+    padding-right: 0;
+    padding-left: 0
+}
+
+#f .f-col {
+    min-width: 0
+}
+
+#f .f-col, #f .f-col-1, #f .f-col-2, #f .f-col-3, #f .f-col-4, #f .f-col-5, #f .f-col-6, #f .f-col-7, #f .f-col-8, #f .f-col-9, #f .f-col-10, #f .f-col-11, #f .f-col-12, #f .f-col-auto, #f .f-col-lg, #f .f-col-lg-1, #f .f-col-lg-2, #f .f-col-lg-3, #f .f-col-lg-4, #f .f-col-lg-5, #f .f-col-lg-6, #f .f-col-lg-7, #f .f-col-lg-8, #f .f-col-lg-9, #f .f-col-lg-10, #f .f-col-lg-11, #f .f-col-lg-12, #f .f-col-lg-auto, #f .f-col-md, #f .f-col-md-1, #f .f-col-md-2, #f .f-col-md-3, #f .f-col-md-4, #f .f-col-md-5, #f .f-col-md-6, #f .f-col-md-7, #f .f-col-md-8, #f .f-col-md-9, #f .f-col-md-10, #f .f-col-md-11, #f .f-col-md-12, #f .f-col-md-auto, #f .f-col-sm, #f .f-col-sm-1, #f .f-col-sm-2, #f .f-col-sm-3, #f .f-col-sm-4, #f .f-col-sm-5, #f .f-col-sm-6, #f .f-col-sm-7, #f .f-col-sm-8, #f .f-col-sm-9, #f .f-col-sm-10, #f .f-col-sm-11, #f .f-col-sm-12, #f .f-col-sm-auto, #f .f-col-ss, #f .f-col-ss-1, #f .f-col-ss-2, #f .f-col-ss-3, #f .f-col-ss-4, #f .f-col-ss-5, #f .f-col-ss-6, #f .f-col-ss-7, #f .f-col-ss-8, #f .f-col-ss-9, #f .f-col-ss-10, #f .f-col-ss-11, #f .f-col-ss-12, #f .f-col-ss-auto, #f .f-col-xl, #f .f-col-xl-1, #f .f-col-xl-2, #f .f-col-xl-3, #f .f-col-xl-4, #f .f-col-xl-5, #f .f-col-xl-6, #f .f-col-xl-7, #f .f-col-xl-8, #f .f-col-xl-9, #f .f-col-xl-10, #f .f-col-xl-11, #f .f-col-xl-12, #f .f-col-xl-auto {
+    position: relative;
+    width: 100%;
+    padding-right: .5rem;
+    padding-left: .5rem
+}
+
+#f .f-col {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%
+}
+
+#f .f-col-auto {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%
+}
+
+#f .f-col-1 {
+    flex: 0 0 8.33333%;
+    max-width: 8.33333%
+}
+
+#f .f-col-2 {
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%
+}
+
+#f .f-col-3 {
+    flex: 0 0 25%;
+    max-width: 25%
+}
+
+#f .f-col-4 {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%
+}
+
+#f .f-col-5 {
+    flex: 0 0 41.66667%;
+    max-width: 41.66667%
+}
+
+#f .f-col-6 {
+    flex: 0 0 50%;
+    max-width: 50%
+}
+
+#f .f-col-7 {
+    flex: 0 0 58.33333%;
+    max-width: 58.33333%
+}
+
+#f .f-col-8 {
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%
+}
+
+#f .f-col-9 {
+    flex: 0 0 75%;
+    max-width: 75%
+}
+
+#f .f-col-10 {
+    flex: 0 0 83.33333%;
+    max-width: 83.33333%
+}
+
+#f .f-col-11 {
+    flex: 0 0 91.66667%;
+    max-width: 91.66667%
+}
+
+#f .f-col-12 {
+    flex: 0 0 100%;
+    max-width: 100%
+}
+
+@media (min-width: 375px) {
+    #f .f-col-ss {
+        flex-basis: 0;
+        flex-grow: 1;
+        max-width: 100%
+    }
+
+    #f .f-col-ss-auto {
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 100%
+    }
+
+    #f .f-col-ss-1 {
+        flex: 0 0 8.33333%;
+        max-width: 8.33333%
+    }
+
+    #f .f-col-ss-2 {
+        flex: 0 0 16.66667%;
+        max-width: 16.66667%
+    }
+
+    #f .f-col-ss-3 {
+        flex: 0 0 25%;
+        max-width: 25%
+    }
+
+    #f .f-col-ss-4 {
+        flex: 0 0 33.33333%;
+        max-width: 33.33333%
+    }
+
+    #f .f-col-ss-5 {
+        flex: 0 0 41.66667%;
+        max-width: 41.66667%
+    }
+
+    #f .f-col-ss-6 {
+        flex: 0 0 50%;
+        max-width: 50%
+    }
+
+    #f .f-col-ss-7 {
+        flex: 0 0 58.33333%;
+        max-width: 58.33333%
+    }
+
+    #f .f-col-ss-8 {
+        flex: 0 0 66.66667%;
+        max-width: 66.66667%
+    }
+
+    #f .f-col-ss-9 {
+        flex: 0 0 75%;
+        max-width: 75%
+    }
+
+    #f .f-col-ss-10 {
+        flex: 0 0 83.33333%;
+        max-width: 83.33333%
+    }
+
+    #f .f-col-ss-11 {
+        flex: 0 0 91.66667%;
+        max-width: 91.66667%
+    }
+
+    #f .f-col-ss-12 {
+        flex: 0 0 100%;
+        max-width: 100%
+    }
+}
+
+@media (min-width: 576px) {
+    #f .f-col-sm {
+        flex-basis: 0;
+        flex-grow: 1;
+        max-width: 100%
+    }
+
+    #f .f-col-sm-auto {
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 100%
+    }
+
+    #f .f-col-sm-1 {
+        flex: 0 0 8.33333%;
+        max-width: 8.33333%
+    }
+
+    #f .f-col-sm-2 {
+        flex: 0 0 16.66667%;
+        max-width: 16.66667%
+    }
+
+    #f .f-col-sm-3 {
+        flex: 0 0 25%;
+        max-width: 25%
+    }
+
+    #f .f-col-sm-4 {
+        flex: 0 0 33.33333%;
+        max-width: 33.33333%
+    }
+
+    #f .f-col-sm-5 {
+        flex: 0 0 41.66667%;
+        max-width: 41.66667%
+    }
+
+    #f .f-col-sm-6 {
+        flex: 0 0 50%;
+        max-width: 50%
+    }
+
+    #f .f-col-sm-7 {
+        flex: 0 0 58.33333%;
+        max-width: 58.33333%
+    }
+
+    #f .f-col-sm-8 {
+        flex: 0 0 66.66667%;
+        max-width: 66.66667%
+    }
+
+    #f .f-col-sm-9 {
+        flex: 0 0 75%;
+        max-width: 75%
+    }
+
+    #f .f-col-sm-10 {
+        flex: 0 0 83.33333%;
+        max-width: 83.33333%
+    }
+
+    #f .f-col-sm-11 {
+        flex: 0 0 91.66667%;
+        max-width: 91.66667%
+    }
+
+    #f .f-col-sm-12 {
+        flex: 0 0 100%;
+        max-width: 100%
+    }
+}
+
+@media (min-width: 768px) {
+    #f .f-col-md {
+        flex-basis: 0;
+        flex-grow: 1;
+        max-width: 100%
+    }
+
+    #f .f-col-md-auto {
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 100%
+    }
+
+    #f .f-col-md-1 {
+        flex: 0 0 8.33333%;
+        max-width: 8.33333%
+    }
+
+    #f .f-col-md-2 {
+        flex: 0 0 16.66667%;
+        max-width: 16.66667%
+    }
+
+    #f .f-col-md-3 {
+        flex: 0 0 25%;
+        max-width: 25%
+    }
+
+    #f .f-col-md-4 {
+        flex: 0 0 33.33333%;
+        max-width: 33.33333%
+    }
+
+    #f .f-col-md-5 {
+        flex: 0 0 41.66667%;
+        max-width: 41.66667%
+    }
+
+    #f .f-col-md-6 {
+        flex: 0 0 50%;
+        max-width: 50%
+    }
+
+    #f .f-col-md-7 {
+        flex: 0 0 58.33333%;
+        max-width: 58.33333%
+    }
+
+    #f .f-col-md-8 {
+        flex: 0 0 66.66667%;
+        max-width: 66.66667%
+    }
+
+    #f .f-col-md-9 {
+        flex: 0 0 75%;
+        max-width: 75%
+    }
+
+    #f .f-col-md-10 {
+        flex: 0 0 83.33333%;
+        max-width: 83.33333%
+    }
+
+    #f .f-col-md-11 {
+        flex: 0 0 91.66667%;
+        max-width: 91.66667%
+    }
+
+    #f .f-col-md-12 {
+        flex: 0 0 100%;
+        max-width: 100%
+    }
+}
+
+@media (min-width: 992px) {
+    #f .f-col-lg {
+        flex-basis: 0;
+        flex-grow: 1;
+        max-width: 100%
+    }
+
+    #f .f-col-lg-auto {
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 100%
+    }
+
+    #f .f-col-lg-1 {
+        flex: 0 0 8.33333%;
+        max-width: 8.33333%
+    }
+
+    #f .f-col-lg-2 {
+        flex: 0 0 16.66667%;
+        max-width: 16.66667%
+    }
+
+    #f .f-col-lg-3 {
+        flex: 0 0 25%;
+        max-width: 25%
+    }
+
+    #f .f-col-lg-4 {
+        flex: 0 0 33.33333%;
+        max-width: 33.33333%
+    }
+
+    #f .f-col-lg-5 {
+        flex: 0 0 41.66667%;
+        max-width: 41.66667%
+    }
+
+    #f .f-col-lg-6 {
+        flex: 0 0 50%;
+        max-width: 50%
+    }
+
+    #f .f-col-lg-7 {
+        flex: 0 0 58.33333%;
+        max-width: 58.33333%
+    }
+
+    #f .f-col-lg-8 {
+        flex: 0 0 66.66667%;
+        max-width: 66.66667%
+    }
+
+    #f .f-col-lg-9 {
+        flex: 0 0 75%;
+        max-width: 75%
+    }
+
+    #f .f-col-lg-10 {
+        flex: 0 0 83.33333%;
+        max-width: 83.33333%
+    }
+
+    #f .f-col-lg-11 {
+        flex: 0 0 91.66667%;
+        max-width: 91.66667%
+    }
+
+    #f .f-col-lg-12 {
+        flex: 0 0 100%;
+        max-width: 100%
+    }
+}
+
+@media (min-width: 1200px) {
+    #f .f-col-xl {
+        flex-basis: 0;
+        flex-grow: 1;
+        max-width: 100%
+    }
+
+    #f .f-col-xl-auto {
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 100%
+    }
+
+    #f .f-col-xl-1 {
+        flex: 0 0 8.33333%;
+        max-width: 8.33333%
+    }
+
+    #f .f-col-xl-2 {
+        flex: 0 0 16.66667%;
+        max-width: 16.66667%
+    }
+
+    #f .f-col-xl-3 {
+        flex: 0 0 25%;
+        max-width: 25%
+    }
+
+    #f .f-col-xl-4 {
+        flex: 0 0 33.33333%;
+        max-width: 33.33333%
+    }
+
+    #f .f-col-xl-5 {
+        flex: 0 0 41.66667%;
+        max-width: 41.66667%
+    }
+
+    #f .f-col-xl-6 {
+        flex: 0 0 50%;
+        max-width: 50%
+    }
+
+    #f .f-col-xl-7 {
+        flex: 0 0 58.33333%;
+        max-width: 58.33333%
+    }
+
+    #f .f-col-xl-8 {
+        flex: 0 0 66.66667%;
+        max-width: 66.66667%
+    }
+
+    #f .f-col-xl-9 {
+        flex: 0 0 75%;
+        max-width: 75%
+    }
+
+    #f .f-col-xl-10 {
+        flex: 0 0 83.33333%;
+        max-width: 83.33333%
+    }
+
+    #f .f-col-xl-11 {
+        flex: 0 0 91.66667%;
+        max-width: 91.66667%
+    }
+
+    #f .f-col-xl-12 {
+        flex: 0 0 100%;
+        max-width: 100%
+    }
+}
+
+#f .f-switch {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    width: 1rem;
+    height: 1.2rem;
+    opacity: 0
+}
+
+#f .f-switch:checked + .f-switch-label:before {
+    background-color: var(--fondy-switch_checked_bg)
+}
+
+#f .f-switch:checked + .f-switch-label:after {
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .25);
+    -webkit-transform: translateX(1.125rem);
+    transform: translateX(1.125rem)
+}
+
+#f .f-switch-label {
+    position: relative;
+    right: -.1875rem;
+    display: block;
+    padding: .1875rem 2.6875rem .1875rem .1875rem;
+    cursor: pointer
+}
+
+#f .f-switch-label:before {
+    position: absolute;
+    top: .2rem;
+    right: .1875rem;
+    display: block;
+    width: 2.5rem;
+    height: 1.375rem;
+    pointer-events: all;
+    content: "";
+    background-color: var(--fondy-switch_bg);
+    border-radius: .9375rem;
+    transition: background-color .15s ease-in-out
+}
+
+#f .f-switch-label:after {
+    position: absolute;
+    top: .3875rem;
+    right: 1.5rem;
+    width: 1rem;
+    height: 1rem;
+    content: "";
+    background-color: var(--fondy-switch_indicator_bg);
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .25);
+    transition: box-shadow .15s ease-in-out, -webkit-transform .15s ease-in-out;
+    transition: transform .15s ease-in-out, box-shadow .15s ease-in-out;
+    transition: transform .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-transform .15s ease-in-out
+}
+
+#f .f-switch-label:hover:before {
+    background-color: var(--fondy-switch_hover_bg)
+}
+
+#f .f-switch-label:hover:after {
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .25)
+}
+
+#f .f-svg {
+    display: inline-block;
+    min-width: 1em;
+    height: 1em;
+    overflow: visible;
+    font-size: inherit;
+    vertical-align: -.125em
+}
+
+#f .f-svg-w-2 {
+    width: .125em
+}
+
+#f .f-svg-w-3 {
+    width: .1875em
+}
+
+#f .f-svg-w-4 {
+    width: .25em
+}
+
+#f .f-svg-w-5 {
+    width: .3125em
+}
+
+#f .f-svg-w-6 {
+    width: .375em
+}
+
+#f .f-svg-w-7 {
+    width: .4375em
+}
+
+#f .f-svg-w-8 {
+    width: .5em
+}
+
+#f .f-svg-w-9 {
+    width: .5625em
+}
+
+#f .f-svg-w-10 {
+    width: .625em
+}
+
+#f .f-svg-w-11 {
+    width: .6875em
+}
+
+#f .f-svg-w-12 {
+    width: .75em
+}
+
+#f .f-svg-w-13 {
+    width: .8125em
+}
+
+#f .f-svg-w-14 {
+    width: .875em
+}
+
+#f .f-svg-w-15 {
+    width: .9375em
+}
+
+#f .f-svg-w-16 {
+    width: 1em
+}
+
+#f .f-svg-w-17 {
+    width: 1.0625em
+}
+
+#f .f-svg-w-18 {
+    width: 1.125em
+}
+
+#f .f-svg-w-19 {
+    width: 1.1875em
+}
+
+#f .f-svg-w-20 {
+    width: 1.25em
+}
+
+#f .f-svg-lg {
+    font-size: 1.5em;
+    line-height: .75em;
+    vertical-align: -35%
+}
+
+#f .f-svg-md {
+    font-size: 1.25em
+}
+
+#f .f-svg-xs {
+    font-size: .75em
+}
+
+#f .f-svg-sm {
+    font-size: .875em
+}
+
+#f .f-svg-1x {
+    font-size: 1em
+}
+
+#f .f-svg-2x {
+    font-size: 2em
+}
+
+#f .f-svg-3x {
+    font-size: 3em
+}
+
+#f .f-svg-4x {
+    font-size: 4em
+}
+
+#f .f-svg-5x {
+    font-size: 5em
+}
+
+#f .f-svg-6x {
+    font-size: 6em
+}
+
+#f .f-svg-7x {
+    font-size: 7em
+}
+
+#f .f-svg-8x {
+    font-size: 8em
+}
+
+#f .f-svg-9x {
+    font-size: 9em
+}
+
+#f .f-svg-10x {
+    font-size: 10em
+}
+
+#f .f-svg-spin {
+    -webkit-animation: f-svg-spin 2s linear infinite;
+    animation: f-svg-spin 2s linear infinite
+}
+
+#f .f-svg-fw {
+    width: 2.5rem;
+    min-width: 2.5rem
+}
+
+@-webkit-keyframes f-svg-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    to {
+        -webkit-transform: rotate(1turn);
+        transform: rotate(1turn)
+    }
+}
+
+@keyframes f-svg-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    to {
+        -webkit-transform: rotate(1turn);
+        transform: rotate(1turn)
+    }
+}
+
+#f .f-icon {
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 90%
+}
+
+#f .f-icon-block {
+    display: block;
+    width: 100%
+}
+
+#f .f-icon-block, #f .f-icon-contain, #f .f-icon-sm {
+    background-size: contain
+}
+
+#f .f-icon-sm {
+    width: 1.5rem;
+    height: 1.5rem
+}
+
+#f .f-icon-md {
+    width: 3rem;
+    height: 3rem;
+    background-size: contain
+}
+
+#f .f-icon-lg {
+    width: 4rem;
+    height: 4rem;
+    background-size: contain
+}
+
+#f .f-icon-no_logo {
+    background-image: url(img/no_logo.d8ef29d0.svg)
+}
+
+#f .f-alert {
+    position: relative;
+    padding: 1.5rem 1.25rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem
+}
+
+#f .f-alert-info {
+    background-color: hsla(var(--fondy-alert_info_bg-h), var(--fondy-alert_info_bg-s), var(--fondy-alert_info_bg-l), .9)
+}
+
+#f .f-alert-info, #f .f-alert-info a {
+    color: var(--fondy-alert_info_color)
+}
+
+#f .f-alert-warning {
+    background-color: var(--fondy-alert_warning_bg)
+}
+
+#f .f-alert-warning, #f .f-alert-warning a {
+    color: var(--fondy-warning)
+}
+
+#f .f-datepicker-datepicker, #f .f-datepicker-input-wrapper {
+    position: relative
+}
+
+#f .f-datepicker-icon-calendar {
+    position: absolute;
+    top: 50%;
+    right: .5rem;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%)
+}
+
+#f .f-datepicker-datepicker-main {
+    background-color: var(--fondy-datepicker_bg)
+}
+
+#f .f-datepicker-datepicker-popup {
+    position: absolute;
+    z-index: 1000;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 2rem hsla(var(--fondy-datepicker_shadow-h), var(--fondy-datepicker_shadow-s), var(--fondy-datepicker_shadow-l), .5)
+}
+
+#f .f-datepicker-datepicker-body {
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+#f .f-datepicker-calendar {
+    width: 336px;
+    padding: 1.375rem 1.125rem .8125rem
+}
+
+#f .f-datepicker-calendar-header {
+    display: flex;
+    padding: 0 .5rem
+}
+
+#f .f-datepicker-calendar-header-label {
+    margin-right: auto
+}
+
+#f .f-datepicker-btn-icon-double-left, #f .f-datepicker-btn-icon-double-right {
+    display: none
+}
+
+#f .f-datepicker-btn-icon-left {
+    order: 1
+}
+
+#f .f-datepicker-btn-icon-right {
+    order: 2
+}
+
+#f .f-datepicker-calendar-decade-separator {
+    margin: 0 .125rem
+}
+
+#f .f-datepicker-calendar-decade-separator:after {
+    content: "~"
+}
+
+#f .f-datepicker-calendar-content {
+    position: relative;
+    height: 17rem
+}
+
+#f .f-datepicker-table {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+    table-layout: fixed;
+    border-spacing: .25rem 0;
+    border-collapse: separate
+}
+
+#f .f-datepicker-table th {
+    padding: 0;
+    font-weight: 500
+}
+
+#f .f-datepicker-table td {
+    padding: 0
+}
+
+#f .f-datepicker-table .not-current-month {
+    color: var(--fondy-datepicker_cell_not_current_month_color)
+}
+
+#f .f-datepicker-table .today {
+    color: var(--fondy-datepicker_cell_today_color);
+    background-color: var(--fondy-datepicker_cell_today_bg)
+}
+
+#f .f-datepicker-table .cell {
+    height: 2.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all .15s ease-in-out
+}
+
+#f .f-datepicker-table .cell:hover {
+    color: var(--fondy-datepicker_cell_hover_color);
+    background-color: var(--fondy-datepicker_cell_hover_bg)
+}
+
+#f .f-datepicker-table .cell.active, #f .f-datepicker-table .cell:active {
+    color: var(--fondy-datepicker_cell_active_color);
+    background-color: var(--fondy-datepicker_cell_active_bg)
+}
+
+#f .f-datepicker-table .cell.disabled {
+    color: var(--fondy-datepicker_cell_disabled_color);
+    cursor: not-allowed
+}
+
+#f .f-datepicker-table-date th {
+    height: 2rem;
+    font-size: .625rem;
+    color: var(--fondy-datepicker_th_color);
+    text-transform: uppercase
+}
+
+#f .f-datepicker-table-month .cell, #f .f-datepicker-table-year .cell {
+    border-radius: 0
+}
+
+#f .f-datepicker-icon-double-left:after, #f .f-datepicker-icon-double-left:before, #f .f-datepicker-icon-double-right:after, #f .f-datepicker-icon-double-right:before, #f .f-datepicker-icon-left:before, #f .f-datepicker-icon-right:before {
+    position: relative;
+    top: -.0625rem;
+    display: inline-block;
+    width: .625rem;
+    height: .625rem;
+    vertical-align: middle;
+    content: "";
+    border-color: currentColor;
+    border-style: solid;
+    border-width: .125rem 0 0 .125rem;
+    border-radius: .0625rem;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: center;
+    transform-origin: center
+}
+
+#f .f-datepicker-icon-double-left:after {
+    left: -.25rem
+}
+
+#f .f-datepicker-icon-double-right:before {
+    left: .25rem
+}
+
+#f .f-datepicker-icon-double-right:after, #f .f-datepicker-icon-double-right:before, #f .f-datepicker-icon-right:before {
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg)
+}
+
+#f .f-datepicker-btn-text {
+    padding: 0 .25rem;
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: var(--fondy-datepicker_btn_text_color);
+    text-align: left;
+    white-space: nowrap;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0
+}
+
+#f .f-datepicker-btn-text:focus {
+    outline: 0
+}
+
+#f .f-scrollbar {
+    height: 100%;
+    min-height: inherit
+}
+
+#f .f-scrollbar:hover .f-scrollbar-track {
+    opacity: 1
+}
+
+#f .f-scrollbar-wrap {
+    height: 100%;
+    min-height: inherit;
+    overflow-x: hidden;
+    overflow-y: scroll
+}
+
+#f .f-scrollbar-track {
+    position: absolute;
+    top: .125rem;
+    right: .125rem;
+    bottom: .125rem;
+    z-index: 1;
+    width: .25rem;
+    border-radius: .25rem;
+    opacity: 0;
+    transition: opacity .25s ease-out
+}
+
+#f .f-scrollbar-thumb {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    cursor: pointer;
+    background-color: hsla(var(--fondy-scrollbar_thumb_bg-h), var(--fondy-scrollbar_thumb_bg-s), var(--fondy-scrollbar_thumb_bg-l), .3);
+    border-radius: inherit
+}
+
+#f .f-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+#f .f-loading-wrapper {
+    z-index: 980
+}
+
+#f .f-loading-backdrop, #f .f-loading-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0
+}
+
+#f .f-loading-backdrop {
+    background-color: var(--fondy-container_bg);
+    opacity: .7
+}
+
+#f .f-loading-custom {
+    width: 4rem;
+    height: 4rem;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain
+}
+
+#f .f-loading-loader {
+    position: relative;
+    width: 3.75rem;
+    height: 3.75rem
+}
+
+#f .f-loading-item {
+    position: absolute;
+    font-size: 1.78125rem;
+    color: #08a835;
+    -webkit-animation-duration: 6s;
+    animation-duration: 6s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite
+}
+
+#f .f-loading-item:first-child {
+    -webkit-animation-name: f-loading-left1;
+    animation-name: f-loading-left1
+}
+
+#f .f-loading-item:nth-child(2) {
+    -webkit-animation-name: f-loading-left2;
+    animation-name: f-loading-left2
+}
+
+#f .f-loading-item:nth-child(3) {
+    color: #000;
+    -webkit-animation-name: f-loading-right;
+    animation-name: f-loading-right
+}
+
+@-webkit-keyframes f-loading-right {
+    0% {
+        top: .1875rem;
+        left: .98438rem
+    }
+    8.33333% {
+        top: 1.96875rem;
+        left: 1.96875rem
+    }
+    16.66667% {
+        top: 1.96875rem;
+        left: 1.96875rem
+    }
+    25% {
+        top: 1.96875rem;
+        left: 0
+    }
+    33.33333% {
+        top: 1.96875rem;
+        left: 0
+    }
+    41.66667% {
+        top: .1875rem;
+        left: .98438rem
+    }
+    50% {
+        top: .1875rem;
+        left: .98438rem
+    }
+    58.33333% {
+        top: 1.96875rem;
+        left: 1.96875rem
+    }
+    66.66667% {
+        top: 1.96875rem;
+        left: 1.96875rem
+    }
+    75% {
+        top: 1.96875rem;
+        left: 0
+    }
+    83.33333% {
+        top: 1.96875rem;
+        left: 0
+    }
+    91.66667% {
+        top: .1875rem;
+        left: .98438rem
+    }
+    to {
+        top: .1875rem;
+        left: .98438rem
+    }
+}
+
+@keyframes f-loading-right {
+    0% {
+        top: .1875rem;
+        left: .98438rem
+    }
+    8.33333% {
+        top: 1.96875rem;
+        left: 1.96875rem
+    }
+    16.66667% {
+        top: 1.96875rem;
+        left: 1.96875rem
+    }
+    25% {
+        top: 1.96875rem;
+        left: 0
+    }
+    33.33333% {
+        top: 1.96875rem;
+        left: 0
+    }
+    41.66667% {
+        top: .1875rem;
+        left: .98438rem
+    }
+    50% {
+        top: .1875rem;
+        left: .98438rem
+    }
+    58.33333% {
+        top: 1.96875rem;
+        left: 1.96875rem
+    }
+    66.66667% {
+        top: 1.96875rem;
+        left: 1.96875rem
+    }
+    75% {
+        top: 1.96875rem;
+        left: 0
+    }
+    83.33333% {
+        top: 1.96875rem;
+        left: 0
+    }
+    91.66667% {
+        top: .1875rem;
+        left: .98438rem
+    }
+    to {
+        top: .1875rem;
+        left: .98438rem
+    }
+}
+
+@-webkit-keyframes f-loading-left1 {
+    0% {
+        top: 1.96875rem;
+        left: 1.96875rem
+    }
+    8.33333% {
+        top: .1875rem;
+        left: .98438rem
+    }
+    33.33333% {
+        top: .1875rem;
+        left: .98438rem
+    }
+    41.66667% {
+        top: 1.96875rem;
+        left: 0
+    }
+    66.66667% {
+        top: 1.96875rem;
+        left: 0
+    }
+    75% {
+        top: 1.96875rem;
+        left: 1.96875rem
+    }
+    to {
+        top: 1.96875rem;
+        left: 1.96875rem
+    }
+}
+
+@keyframes f-loading-left1 {
+    0% {
+        top: 1.96875rem;
+        left: 1.96875rem
+    }
+    8.33333% {
+        top: .1875rem;
+        left: .98438rem
+    }
+    33.33333% {
+        top: .1875rem;
+        left: .98438rem
+    }
+    41.66667% {
+        top: 1.96875rem;
+        left: 0
+    }
+    66.66667% {
+        top: 1.96875rem;
+        left: 0
+    }
+    75% {
+        top: 1.96875rem;
+        left: 1.96875rem
+    }
+    to {
+        top: 1.96875rem;
+        left: 1.96875rem
+    }
+}
+
+@-webkit-keyframes f-loading-left2 {
+    0% {
+        top: 1.96875rem;
+        left: 0
+    }
+    16.66667% {
+        top: 1.96875rem;
+        left: 0
+    }
+    25% {
+        top: 1.96875rem;
+        left: 1.96875rem
+    }
+    50% {
+        top: 1.96875rem;
+        left: 1.96875rem
+    }
+    58.33333% {
+        top: .1875rem;
+        left: .98438rem
+    }
+    83.33333% {
+        top: .1875rem;
+        left: .98438rem
+    }
+    91.66667% {
+        top: 1.96875rem;
+        left: 0
+    }
+    to {
+        top: 1.96875rem;
+        left: 0
+    }
+}
+
+@keyframes f-loading-left2 {
+    0% {
+        top: 1.96875rem;
+        left: 0
+    }
+    16.66667% {
+        top: 1.96875rem;
+        left: 0
+    }
+    25% {
+        top: 1.96875rem;
+        left: 1.96875rem
+    }
+    50% {
+        top: 1.96875rem;
+        left: 1.96875rem
+    }
+    58.33333% {
+        top: .1875rem;
+        left: .98438rem
+    }
+    83.33333% {
+        top: .1875rem;
+        left: .98438rem
+    }
+    91.66667% {
+        top: 1.96875rem;
+        left: 0
+    }
+    to {
+        top: 1.96875rem;
+        left: 0
+    }
+}
+
+#f .f-preloader {
+    height: 3.5rem;
+    background: linear-gradient(120deg, #d5dae0 41%, #f7f8f9 50%, #d5dae0 59%);
+    background-size: 200% 100%;
+    border-radius: .5rem;
+    -webkit-animation: f-preloader 2s ease-in-out infinite;
+    animation: f-preloader 2s ease-in-out infinite
+}
+
+#f .f-preloader-xs {
+    height: 1.25rem
+}
+
+#f .f-preloader-sm {
+    height: 2.375rem
+}
+
+@-webkit-keyframes f-preloader {
+    0% {
+        background-position: 80% 0
+    }
+    50% {
+        background-position: 20% 0
+    }
+    to {
+        background-position: 80% 0
+    }
+}
+
+@keyframes f-preloader {
+    0% {
+        background-position: 80% 0
+    }
+    50% {
+        background-position: 20% 0
+    }
+    to {
+        background-position: 80% 0
+    }
+}
+
+#f .f-placeholder {
+    position: absolute;
+    top: 1.0625rem;
+    font-family: Card Number, sans-serif;
+    font-size: .9375rem;
+    font-weight: 400;
+    line-height: 1.125rem;
+    color: hsla(var(--fondy-card_input_color-h), var(--fondy-card_input_color-s), var(--fondy-card_input_color-l), .3);
+    text-shadow: .0625rem .0625rem .125rem hsla(var(--fondy-card_input_shadow-h), var(--fondy-card_input_shadow-s), var(--fondy-card_input_shadow-l), .15);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+#f .f-outline, #f .f-svg, #f a {
+    transition: box-shadow .15s ease-in-out
+}
+
+#f .f-checkbox:focus + .f-checkbox-label, #f .f-form-control:focus, #f .f-outline:focus, #f .f-svg:focus, #f .f-switch:focus + .f-switch-label, #f a:focus {
+    position: relative;
+    outline: 0;
+    box-shadow: 0 0 0 .125rem var(--fondy-container_bg), 0 0 0 .25rem var(--fondy-outline_border)
+}
+
+#f .f-checkbox:focus + .f-checkbox-label, #f .f-outline-sm:focus, #f .f-svg:focus, #f .f-switch:focus + .f-switch-label, #f a:focus {
+    box-shadow: 0 0 0 .125rem var(--fondy-container_bg), 0 0 0 .21875rem var(--fondy-outline_border)
+}
+
+#f .f-checkbox:focus + .f-checkbox-label, #f .f-switch:focus + .f-switch-label {
+    background: var(--fondy-outline_bg)
+}
+
+#f .f-btn-success:focus {
+    box-shadow: 0 0 0 .125rem var(--fondy-container_bg), 0 0 0 .25rem var(--fondy-btn_success_bg)
+}
+
+#f .f-btn-dark:focus, #f .f-btn-default:focus, #f .f-btn-light:focus, #f .f-btn-outline:focus, #f .f-btn-secondary:focus {
+    box-shadow: 0 0 0 .125rem var(--fondy-container_bg), 0 0 0 .25rem var(--fondy-outline_border)
+}
+
+#f .f-bank-item:focus, #f .f-btn-link:focus {
+    box-shadow: 0 0 0 .125rem var(--fondy-outline_border)
+}
+
+#f .f-checkbox-label, #f .f-svg, #f .f-switch-label, #f a {
+    border-radius: .0625rem
+}
+
+#f .f-subscription .f-form-control:focus {
+    box-shadow: 0 0 0 .125rem var(--fondy-subscription_bg), 0 0 0 .25rem var(--fondy-outline_border)
+}
+
+#f .f-subscription .f-checkbox:focus + .f-checkbox-label, #f .f-subscription .f-switch:focus + .f-switch-label {
+    box-shadow: 0 0 0 .125rem var(--fondy-subscription_bg), 0 0 0 .21875rem var(--fondy-outline_border)
+}
+
+#f .f-close:focus {
+    box-shadow: 0 0 0 .125rem var(--fondy-outline_border)
+}
+
+#f .f-checkbox-secondary:focus + .f-checkbox-label, #f .f-switch-secondary:focus + .f-switch-label {
+    background: var(--fondy-outline_secondary_bg)
+}
+
+#f .f-alert-info a:focus, #f .f-checkbox-secondary:focus + .f-checkbox-label, #f .f-switch-secondary:focus + .f-switch-label {
+    box-shadow: 0 0 0 .125rem hsla(var(--fondy-alert_info_bg-h), var(--fondy-alert_info_bg-s), var(--fondy-alert_info_bg-l), .9), 0 0 0 .21875rem var(--fondy-outline_secondary_border)
+}
+
+#f .f-alert-info .f-btn-secondary:focus {
+    box-shadow: 0 0 0 .125rem hsla(var(--fondy-alert_info_bg-h), var(--fondy-alert_info_bg-s), var(--fondy-alert_info_bg-l), .9), 0 0 0 .25rem var(--fondy-outline_secondary_border)
+}
+
+#f .f-alert-info .f-btn-link-secondary:focus {
+    box-shadow: 0 0 0 .125rem var(--fondy-outline_secondary_border)
+}
+
+#f .f-modal .f-btn-secondary:focus {
+    box-shadow: 0 0 0 .125rem #fff, 0 0 0 .25rem var(--fondy-outline_secondary_border)
+}
+
+#f .f-header .f-form-control-select:focus {
+    box-shadow: 0 0 0 .125rem var(--fondy-outline_border)
+}
+
+#f .f-form-group-card .f-form-control:focus {
+    box-shadow: none
+}
+
+#f .f-qrcode svg {
+    width: 256px;
+    height: 256px
+}
+
+#f {
+    font-family: inter, sans-serif;
+    font-size: 1rem;
+    line-height: 1.4;
+    color: var(--fondy-main_color);
+    background-color: var(--fondy-main_bg)
+}
+
+#f .f-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: var(--fondy-container_bg)
+}
+
+#f .f-loyaut {
+    height: 100%
+}
+
+#f .f-demo {
+    position: absolute;
+    right: 0;
+    left: 0;
+    display: block;
+    height: 1rem;
+    content: "";
+    border-top: 2px solid #30d769
+}
+
+#f .f-demo-desc {
+    font-size: .875rem;
+    text-align: center
+}
+
+#f .f-header {
+    display: flex;
+    height: 4.625rem;
+    background: var(--fondy-container_bg)
+}
+
+#f .f-header-logo {
+    display: flex;
+    flex: 0 0 50%;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 50%;
+    padding: 1.5rem 0 0 1.25rem
+}
+
+html #f.f-embed .f-header-logo {
+    height: auto;
+    padding-top: 0
+}
+
+#f .f-header-menu {
+    display: flex;
+    flex: 0 0 50%;
+    align-items: center;
+    justify-content: flex-end;
+    max-width: 50%;
+    padding: 1.5rem 1.25rem 0 0
+}
+
+#f .f-wrapper {
+    position: relative;
+    height: calc(100% - 4.625rem)
+}
+
+html #f.f-embed .f-wrapper {
+    min-height: 500px
+}
+
+#f .f-top {
+    background-image: linear-gradient(180deg, var(--fondy-container_bg), hsla(var(--fondy-container_bg-h), var(--fondy-container_bg-s), var(--fondy-container_bg-l), 0))
+}
+
+@supports ((position:-webkit-sticky) or (position:sticky)) {
+    #f .f-top {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 1020
+    }
+}
+
+#f .f-top-inner {
+    height: 1.5rem
+}
+
+#f .f-center-wrap {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1.25rem
+}
+
+#f .f-logo {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: var(--fondy-logo_color);
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    background-size: contain
+}
+
+#f .f-logo svg {
+    width: 6.25rem;
+    height: 1.4375rem
+}
+
+#f .f-button-pay {
+    margin-bottom: 1rem
+}
+
+#f .f-btn-methods {
+    left: -.5rem;
+    display: block;
+    padding: .5rem .5rem
+}
+
+#f .f-security {
+    padding-top: 2rem;
+    padding-bottom: 20px;
+    margin-top: auto;
+    text-align: center
+}
+
+#f .f-method-wallets .f-security {
+    display: none
+}
+
+#f .f-menu {
+    margin-bottom: 2rem
+}
+
+#f .f-menu-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 4.5rem;
+    padding: 0 .9375rem 0 .4375rem;
+    margin-bottom: .75rem;
+    font-weight: 400;
+    color: var(--fondy-menu_item_color);
+    text-align: left;
+    cursor: pointer;
+    background-color: var(--fondy-container_bg);
+    border: 1px solid var(--fondy-menu_item_border);
+    border-radius: .5rem;
+    transition: all .15s ease-in-out
+}
+
+#f .f-menu-item:hover {
+    padding: 0 1rem 0 .5rem;
+    background: var(--fondy-menu_item_hover_bg);
+    border: none
+}
+
+#f .f-menu-item.active {
+    font-weight: 500;
+    color: var(--fondy-menu_item_active_color);
+    background: var(--fondy-menu_item_active_bg)
+}
+
+#f .f-menu-item.active .f-menu-icon {
+    color: var(--fondy-menu_icon_active_color)
+}
+
+#f .f-menu-item.active .f-icons-count {
+    color: var(--fondy-menu_count_active_color);
+    background: var(--fondy-menu_count_active_bg)
+}
+
+#f .f-menu-item.active .f-icon {
+    opacity: 1
+}
+
+#f .f-menu-item.active, #f .f-menu-item:hover {
+    text-decoration: none
+}
+
+#f .f-menu-icon {
+    color: var(--fondy-menu_icon_color);
+    transition: all .15s ease-in-out
+}
+
+#f .f-menu-icons {
+    margin-left: auto
+}
+
+#f .f-card {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 3.9375rem 0 1rem 1rem;
+    margin-bottom: 2rem
+}
+
+#f .f-card-shadow {
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    width: 80%;
+    height: 2rem;
+    content: "";
+    border-radius: 1rem;
+    box-shadow: 0 .625rem 1.5625rem hsla(var(--fondy-card_shadow-h), var(--fondy-card_shadow-s), var(--fondy-card_shadow-l), .6)
+}
+
+#f .f-theme-dark .f-card-shadow {
+    box-shadow: 0 .625rem 1.5625rem rgba(0, 0, 0, .6)
+}
+
+#f .f-card-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: linear-gradient(180deg, hsl(var(--fondy-card_bg-h), calc(var(--fondy-card_bg-s) + 3%), calc(var(--fondy-card_bg-l) + 4%)), var(--fondy-card_bg) 35%, hsl(var(--fondy-card_bg-h), calc(var(--fondy-card_bg-s)), calc(var(--fondy-card_bg-l) - 4%)));
+    background-clip: padding-box;
+    border-radius: 1rem;
+    box-shadow: var(--fondy-card_shadow_custom)
+}
+
+#f .f-card-bg-lighten {
+    background: linear-gradient(180deg, hsl(var(--fondy-card_bg-h), calc(var(--fondy-card_bg-s) + 3%), calc(var(--fondy-card_bg-l) + 8%)), hsl(var(--fondy-card_bg-h), calc(var(--fondy-card_bg-s)), calc(var(--fondy-card_bg-l) + 4%)) 35%, var(--fondy-card_bg))
+}
+
+#f .f-card-img {
+    background: var(--fondy-card_img) no-repeat 0 0/100% 100%
+}
+
+#f .f-card-gradient-custom {
+    background: var(--fondy-card_gradient_custom)
+}
+
+#f .f-card-brand {
+    position: absolute;
+    top: .875rem;
+    right: .875rem
+}
+
+#f .f-card-brand-icon {
+    width: 5.375rem;
+    height: 2.625rem;
+    border: .0625rem solid #fff;
+    border-radius: .375rem
+}
+
+#f .f-form-group-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 0 1.25rem 0 0
+}
+
+#f .f-form-group-card .f-control-label {
+    order: -1;
+    margin-bottom: .375rem;
+    font-size: .625rem;
+    line-height: .75rem;
+    color: var(--fondy-card_label_color);
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    opacity: .7
+}
+
+#f .f-form-group-card .f-form-control {
+    height: 1.125rem;
+    padding: 0;
+    font-family: Card Number, sans-serif;
+    font-size: .9375rem;
+    font-weight: 400;
+    line-height: 1.125rem;
+    color: var(--fondy-card_input_color);
+    text-shadow: .0625rem .0625rem .125rem hsla(var(--fondy-card_input_shadow-h), var(--fondy-card_input_shadow-s), var(--fondy-card_input_shadow-l), .15);
+    background-color: transparent;
+    border: none;
+    border-radius: 0
+}
+
+#f .f-form-group-card .f-form-control:hover {
+    background-color: inherit
+}
+
+#f .f-form-group-card .f-form-control:-webkit-autofill {
+    -webkit-text-fill-color: var(--fondy-card_input_color)
+}
+
+#f .f-form-group-card .f-form-control:-webkit-autofill:first-line {
+    font-family: Card Number, sans-serif;
+    font-size: .9375rem;
+    line-height: 1.125rem;
+    color: var(--fondy-card_input_color)
+}
+
+#f .f-form-group-card .f-form-control::-webkit-input-placeholder {
+    font-family: Card Number, sans-serif;
+    color: hsla(var(--fondy-card_input_color-h), var(--fondy-card_input_color-s), var(--fondy-card_input_color-l), .3)
+}
+
+#f .f-form-group-card .f-form-control::-moz-placeholder {
+    font-family: Card Number, sans-serif;
+    color: hsla(var(--fondy-card_input_color-h), var(--fondy-card_input_color-s), var(--fondy-card_input_color-l), .3)
+}
+
+#f .f-form-group-card .f-form-control:-ms-input-placeholder {
+    font-family: Card Number, sans-serif;
+    color: hsla(var(--fondy-card_input_color-h), var(--fondy-card_input_color-s), var(--fondy-card_input_color-l), .3)
+}
+
+#f .f-form-group-card .f-form-control::-ms-input-placeholder {
+    font-family: Card Number, sans-serif;
+    color: hsla(var(--fondy-card_input_color-h), var(--fondy-card_input_color-s), var(--fondy-card_input_color-l), .3)
+}
+
+#f .f-form-group-card .f-form-control::placeholder {
+    font-family: Card Number, sans-serif;
+    color: hsla(var(--fondy-card_input_color-h), var(--fondy-card_input_color-s), var(--fondy-card_input_color-l), .3)
+}
+
+#f .f-form-group-card .f-form-control[readonly] {
+    opacity: .6
+}
+
+#f .f-form-group-card .f-form-control[readonly]::-webkit-input-placeholder {
+    font-family: Cvv, sans-serif;
+    color: var(--fondy-card_input_color)
+}
+
+#f .f-form-group-card .f-form-control[readonly]::-moz-placeholder {
+    font-family: Cvv, sans-serif;
+    color: var(--fondy-card_input_color)
+}
+
+#f .f-form-group-card .f-form-control[readonly]:-ms-input-placeholder {
+    font-family: Cvv, sans-serif;
+    color: var(--fondy-card_input_color)
+}
+
+#f .f-form-group-card .f-form-control[readonly]::-ms-input-placeholder {
+    font-family: Cvv, sans-serif;
+    color: var(--fondy-card_input_color)
+}
+
+#f .f-form-group-card .f-form-control[readonly]::placeholder {
+    font-family: Cvv, sans-serif;
+    color: var(--fondy-card_input_color)
+}
+
+#f .f-form-group-card-number {
+    width: 100%;
+    margin: 0 0 .9375rem 0
+}
+
+#f [name=f-expiry_date] {
+    width: 5rem
+}
+
+#f .f-form-control[name=f-cvv2] {
+    width: 4.6875rem;
+    font-family: Cvv, sans-serif
+}
+
+#f .f-form-control[name=f-cvv2]:-webkit-autofill:first-line {
+    font-family: Cvv, sans-serif
+}
+
+#f .f-control-label-card-list {
+    margin-right: auto
+}
+
+#f .f-card-list {
+    font-weight: 500
+}
+
+#f .f-card-list-add, #f .f-card-list-item {
+    display: flex;
+    height: 3.75rem;
+    padding: .6875rem 1.25rem;
+    margin-bottom: .8125rem;
+    color: var(--fondy-main_color);
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color .15s ease-in-out
+}
+
+#f .f-card-list-add:last-child, #f .f-card-list-item:last-child {
+    margin-bottom: 0
+}
+
+#f .f-card-list-add.active, #f .f-card-list-add:hover, #f .f-card-list-item.active, #f .f-card-list-item:hover {
+    text-decoration: none;
+    background-color: var(--fondy-card_list_item_active_bg)
+}
+
+#f .f-card-list-add {
+    height: inherit
+}
+
+#f .f-card-list-icon {
+    width: 2.5rem;
+    height: 1.25rem;
+    margin-right: .25rem;
+    color: var(--fondy-icon_color);
+    border-radius: .375rem
+}
+
+#f .f-card-list-number {
+    color: var(--fondy-card_list_number_color)
+}
+
+#f .f-card-list-expiry-date {
+    font-size: .75rem;
+    font-weight: 400;
+    color: var(--fondy-card_list_expiry_date_color)
+}
+
+#f .f-modal-security-title {
+    margin-bottom: 2rem;
+    color: var(--fondy-modal_security_title_color)
+}
+
+#f .f-modal-security-title .f-svg {
+    margin-right: .625rem;
+    color: var(--fondy-modal_security_title_svg_color)
+}
+
+#f .f-modal-security-content {
+    margin-bottom: 2rem;
+    font-weight: 300
+}
+
+#f .f-modal-security-icons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+    opacity: .5
+}
+
+#f .f-modal-content-card-list {
+    padding-top: .75rem
+}
+
+#f .f-modal-body-card-list {
+    padding: 0 0 .75rem 0
+}
+
+#f .f-success {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto
+}
+
+#f .f-success-title {
+    text-align: center
+}
+
+#f .f-success-title svg {
+    margin: -1rem 0
+}
+
+#f .f-success-form-group {
+    padding: 1rem;
+    word-wrap: break-word;
+    border: 1px solid var(--fondy-input_border);
+    border-radius: .5rem
+}
+
+#f .f-wallet-pay-button:after {
+    padding: .625rem;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-origin: content-box;
+    background-size: contain
+}
+
+#f .f-wallet-pay-button iframe {
+    height: 100%;
+    border: 0
+}
+
+#f .f-sidebar .f-wallet-pay-button {
+    margin-bottom: 2rem
+}
+
+#f .f-center .f-wallet-pay-button {
+    margin-bottom: 1.5rem
+}
+
+#f .f-wallet-pay-title {
+    margin-bottom: 1rem;
+    font-weight: 300
+}
+
+#f .f-wallet-pay-button-click {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2
+}
+
+#f .f-wallet-pay-button-google-dark, #f .f-wallet-pay-button-google-light {
+    padding: 0
+}
+
+#f .f-wallet-pay-button-card-light:after, #f .f-wallet-pay-button-google-light:after {
+    background-image: url(https://www.gstatic.com/instantbuy/svg/light_gpay.svg)
+}
+
+#f .f-wallet-pay-button-card-dark:after, #f .f-wallet-pay-button-google-dark:after {
+    background-image: url(https://www.gstatic.com/instantbuy/svg/dark_gpay.svg)
+}
+
+#f .f-wallet-pay-button-google-load:after {
+    background-image: none
+}
+
+#f .f-wallet-pay-button-apple-light:after {
+    background-image: url(img/apple-pay-light.f327fb3e.svg)
+}
+
+#f .f-wallet-pay-button-apple-dark:after {
+    background-image: url(img/apple-pay-dark.fc716ff7.svg)
+}
+
+#f .f-bank-item {
+    display: flex;
+    flex: 0 0 100%;
+    align-items: center;
+    max-width: 100%;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    margin-bottom: .5rem;
+    color: var(--fondy-bank_item_color);
+    cursor: pointer;
+    border-radius: .5rem
+}
+
+#f .f-bank-item:hover {
+    color: var(--fondy-bank_item_hover_color);
+    transition: all .15s ease-in-out
+}
+
+#f .f-bank-item.f-bank-item-list {
+    flex: 0 0 100%;
+    max-width: 100%
+}
+
+#f .f-bank-item-DE {
+    align-items: flex-start
+}
+
+#f .f-bank-item-wrapper-list {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: space-between
+}
+
+#f .f-bank-icon {
+    min-width: 3rem;
+    margin-right: .75rem;
+    border-radius: .5rem;
+    box-shadow: 0 .0625rem .25rem var(--fondy-bank_icon_shadow)
+}
+
+#f .f-bank-icon-list {
+    min-width: 1.5rem;
+    border-radius: .1875rem;
+    box-shadow: none
+}
+
+#f .f-bank-name {
+    font-size: .875rem;
+    word-wrap: break-word
+}
+
+#f .f-bank-country, #f .f-bank-search, #f .f-bank-view {
+    flex: 0 0 100%;
+    max-width: 100%
+}
+
+#f .f-bank-view-wrapper {
+    display: flex;
+    align-items: stretch;
+    height: 2.75rem;
+    border: 1px solid var(--fondy-input_border);
+    border-radius: .5rem
+}
+
+#f .f-bank-view-icon {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-right: 1px solid var(--fondy-input_border)
+}
+
+#f .f-bank-view-icon.f-active, #f .f-bank-view-icon:hover {
+    color: var(--fondy-bank_view_icon_active_color);
+    background-color: var(--fondy-bank_view_icon_active_bg);
+    transition: all .15s ease-in-out
+}
+
+#f .f-bank-view-icon:first-child {
+    border-radius: .4375rem 0 0 .4375rem
+}
+
+#f .f-bank-view-icon:last-child {
+    border: none;
+    border-radius: 0 .4375rem .4375rem 0
+}
+
+#f .f-bank-footer {
+    text-align: center
+}
+
+#f .f-system {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: .75rem;
+    margin-bottom: .75rem;
+    background-color: var(--fondy-bank_select_bg);
+    border-radius: .5rem
+}
+
+#f .f-system-icon {
+    border-radius: .5rem
+}
+
+#f .f-system-icon, #f .f-system-name {
+    margin-right: .75rem
+}
+
+#f .f-system-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1.25rem;
+    font-size: 1.75rem;
+    font-weight: 300;
+    color: var(--fondy-bank_select_close_color)
+}
+
+#f .f-system-close:hover {
+    color: var(--fondy-bank_select_close_hover_color)
+}
+
+#f .f-bank-desc {
+    margin-bottom: 1.25rem
+}
+
+#f .f-subscription {
+    padding: 1rem .75rem .75rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    background-color: var(--fondy-subscription_bg);
+    border-radius: .5rem
+}
+
+#f .f-subscription-wrapper {
+    margin-top: .75rem
+}
+
+#f .f-subscription-wrapper > :last-child {
+    margin: 0
+}
+
+#f .f-form-control-every {
+    border-right: none;
+    border-radius: .5rem 0 0 .5rem
+}
+
+#f .f-form-control-period {
+    border-left: none;
+    border-radius: 0 .5rem .5rem 0
+}
+
+#f .f-verification-desc {
+    font-size: .75rem
+}
+
+#f .f-fast-access {
+    display: flex;
+    flex-wrap: wrap
+}
+
+#f .f-fast-access-icon {
+    margin: 0 22px 1.25rem 0;
+    cursor: pointer;
+    border-radius: .5rem;
+    box-shadow: 0 1px 4px var(--fondy-bank_icon_shadow)
+}
+
+#f .f-tooltip-security-icons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    opacity: .5
+}
+
+#f .f-tooltip-security-content {
+    font-size: .875rem;
+    font-weight: 400
+}
+
+#f .f-tooltip-security-content p:last-child {
+    margin-bottom: 0
+}
+
+#f .f-tooltip-icons .f-tooltip-inner {
+    flex-wrap: wrap;
+    max-width: 19rem;
+    padding: .75rem .25rem .25rem .75rem
+}
+
+#f .f-tooltip-icons .f-icon {
+    margin: 0 .5rem .5rem 0;
+    border-radius: .1875rem;
+    box-shadow: 0 .0625rem .25rem var(--fondy-tooltip_icons_shadow)
+}
+
+#f .f-tooltip-error .f-tooltip-inner {
+    color: var(--fondy-tooltip_error_color)
+}
+
+#f .f-tooltip-card .f-tooltip-inner {
+    padding: .5rem 0;
+    color: var(--fondy-tooltip_card_color)
+}
+
+#f .f-tooltip-cvv .f-tooltip-inner {
+    color: var(--fondy-tooltip_cvv_color)
+}
+
+#f .f-tooltip-menu .f-tooltip-inner {
+    align-items: center
+}
+
+#f .f-tooltip-menu svg {
+    flex: 0 0 3.125rem;
+    max-width: 3.125rem
+}
+
+#f .f-receipt-title {
+    text-align: left
+}
+
+#f .f-receipt-props {
+    padding: 1rem 1.25rem;
+    margin: 0 -1.25rem .75rem;
+    background: var(--fondy-receipt_props_bg)
+}
+
+#f .f-receipt-row {
+    margin-bottom: 1.125rem
+}
+
+#f .f-receipt-row:last-child {
+    margin-bottom: 0
+}
+
+#f .f-receipt-key {
+    font-size: .875rem
+}
+
+#f .f-receipt-value {
+    color: var(--fondy-receipt_value_color)
+}
+
+#f .f-theme-light .f-receipt-value {
+    font-weight: 600
+}
+
+#f .f-receipt-buttons {
+    margin-top: 1.5rem;
+    margin-bottom: 2.125rem
+}
+
+#f .f-receipt-ibox-info {
+    display: flex
+}
+
+#f .f-receipt-ibox-info svg {
+    margin: .625rem .75rem 0 0
+}
+
+#f .f-qr-code-img {
+    margin-bottom: 1.5rem;
+    text-align: center
+}
+
+#f .f-qr-code-text {
+    margin: 0 -2rem;
+    font-size: .875rem;
+    text-align: center
+}
+
+#f .f-gdpr {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
+    padding-bottom: 2rem;
+    margin-bottom: 0;
+    border-radius: .75rem .75rem 0 0
+}
+
+#f .f-gdpr .f-checkbox-label:after {
+    border-color: #6a747e
+}
+
+#f .f-gdpr-content {
+    line-height: 1.25rem
+}
+
+#f .f-gdpr-buttons {
+    text-align: center
+}
+
+#f .f-notification {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1021;
+    display: flex;
+    align-items: stretch;
+    padding: 0;
+    border-radius: 0 0 .75rem .75rem;
+    box-shadow: 0 .875rem 1.5625rem hsla(var(--fondy-container_box_shadow-h), var(--fondy-container_box_shadow-s), var(--fondy-container_box_shadow-l), .4)
+}
+
+#f .f-notification-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 3.25rem;
+    color: var(--fondy-alert_warning_bg);
+    background-color: var(--fondy-warning);
+    border-radius: 0 0 0 1rem
+}
+
+#f .f-notification-text {
+    padding: 1rem 0 1rem 1.25rem;
+    margin-right: auto
+}
+
+#f .f-notification-btn {
+    display: flex;
+    align-items: center
+}
+
+#f .f-notification-btn .f-btn {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem
+}
+
+#f .f-method {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: inherit
+}
+
+#f .f-container-sm {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto
+}
+
+#f .f-merchant-name {
+    font-weight: 500;
+    color: var(--fondy-merchant_name_color)
+}
+
+#f .f-merchant-url {
+    margin-bottom: .75rem
+}
+
+#f .f-merchant-url a {
+    font-weight: 500;
+    color: var(--fondy-merchant_url_color)
+}
+
+#f .f-merchant-url a:hover {
+    color: hsl(var(--fondy-merchant_url_color-h), var(--fondy-merchant_url_color-s), calc(var(--fondy-merchant_url_color-l) - 10%))
+}
+
+#f .f-order-desc {
+    margin-bottom: .75rem;
+    color: var(--fondy-order_desc_color)
+}
+
+#f .f-order-desc-text {
+    position: relative;
+    display: block;
+    max-height: 2.8rem;
+    overflow: hidden;
+    line-height: 1.4;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    white-space: normal;
+    background: var(--fondy-container_bg)
+}
+
+#f .f-order-desc-text:after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: inherit
+}
+
+#f .f-order-desc-text:before {
+    position: absolute;
+    top: 1.4rem;
+    right: 0;
+    content: "...";
+    background-color: inherit
+}
+
+#f .f-order-desc-more {
+    font-weight: 600;
+    color: var(--fondy-order_desc_more_color)
+}
+
+#f .f-order-desc-more:hover {
+    color: hsl(var(--fondy-order_desc_more_color-h), var(--fondy-order_desc_more_color-s), calc(var(--fondy-order_desc_more_color-l) - 10%))
+}
+
+#f .f-price {
+    position: relative;
+    margin-bottom: 1.5rem
+}
+
+#f .f-amount {
+    display: inline-block;
+    margin-right: .25rem;
+    font-size: 1.75rem;
+    line-height: 1.2;
+    color: var(--fondy-amount_color)
+}
+
+#f .f-amount sup {
+    font-size: 1rem
+}
+
+#f .f-currency {
+    display: inline-block;
+    font-size: 1.25rem;
+    color: var(--fondy-currency_color)
+}
+
+#f .f-fee {
+    position: absolute;
+    top: 1.625rem;
+    z-index: 1;
+    font-weight: 500;
+    color: var(--fondy-fee_color)
+}
+
+#f .f-hidden {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    display: inline;
+    width: auto;
+    padding-right: 0;
+    opacity: 0
+}
+
+#f .f-icons-title {
+    margin-right: 1rem;
+    font-weight: 300;
+    letter-spacing: -.01875rem
+}
+
+#f .f-lang {
+    padding: .5rem 1.75rem .5rem .5rem;
+    color: var(--fondy-btn_link_default_color);
+    border: none
+}
+
+#f .f-icons {
+    display: flex;
+    align-items: center;
+    padding: .25rem 0
+}
+
+#f .f-icons .f-icon {
+    margin-right: .5rem;
+    border-radius: .1875rem;
+    box-shadow: 0 .0625rem .25rem var(--fondy-menu_icons_shadow)
+}
+
+#f .f-icons .f-icon:last-child {
+    margin-right: 0
+}
+
+#f .f-icons-count {
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: .625rem;
+    line-height: 1.5rem;
+    color: var(--fondy-menu_count_color);
+    text-align: center;
+    background: var(--fondy-menu_count_bg);
+    border-radius: .1875rem;
+    transition: all .15s ease-in-out
+}
+
+#f .f-icons-count:hover {
+    color: hsl(var(--fondy-menu_count_color-h), var(--fondy-menu_count_color-s), calc(var(--fondy-menu_count_color-l) - 10%));
+    text-decoration: none
+}
+
+#f .f-title-security {
+    padding: .1875rem;
+    font-size: .75rem;
+    color: var(--fondy-security_color);
+    text-align: center;
+    cursor: pointer;
+    transition: color .15s ease-in-out
+}
+
+#f .f-title-security:hover {
+    color: var(--fondy-security_hover_color);
+    text-decoration: none
+}
+
+#f .f-title-security:hover .f-svg-security {
+    color: var(--fondy-security_icon_hover_color)
+}
+
+#f .f-title-security .f-svg {
+    margin-right: .625rem
+}
+
+#f .f-svg-security {
+    color: var(--fondy-security_icon_color);
+    vertical-align: middle;
+    transition: color .15s ease-in-out
+}
+
+#f .f-form-group-currency {
+    position: absolute;
+    top: 1.0625rem;
+    right: .75rem;
+    z-index: 1;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--fondy-label_color);
+    transition: all .15s ease-in-out;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0
+}
+
+#f .f-active + .f-form-group-currency {
+    -webkit-transform: translateY(7px);
+    transform: translateY(7px)
+}
+
+#f .f-demo-title {
+    position: absolute;
+    left: 50%;
+    padding: .0625rem 1rem;
+    font-size: .875rem;
+    font-weight: 500;
+    color: #fff;
+    background: #30d769;
+    border-radius: 0 0 .5rem .5rem;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
+}
+
+#f .f-m-0 {
+    margin: 0 !important
+}
+
+#f .f-mt-0, #f .f-my-0 {
+    margin-top: 0 !important
+}
+
+#f .f-mr-0, #f .f-mx-0 {
+    margin-right: 0 !important
+}
+
+#f .f-mb-0, #f .f-my-0 {
+    margin-bottom: 0 !important
+}
+
+#f .f-ml-0, #f .f-mx-0 {
+    margin-left: 0 !important
+}
+
+#f .f-m-1 {
+    margin: .25rem !important
+}
+
+#f .f-mt-1, #f .f-my-1 {
+    margin-top: .25rem !important
+}
+
+#f .f-mr-1, #f .f-mx-1 {
+    margin-right: .25rem !important
+}
+
+#f .f-mb-1, #f .f-my-1 {
+    margin-bottom: .25rem !important
+}
+
+#f .f-ml-1, #f .f-mx-1 {
+    margin-left: .25rem !important
+}
+
+#f .f-m-2 {
+    margin: .5rem !important
+}
+
+#f .f-mt-2, #f .f-my-2 {
+    margin-top: .5rem !important
+}
+
+#f .f-mr-2, #f .f-mx-2 {
+    margin-right: .5rem !important
+}
+
+#f .f-mb-2, #f .f-my-2 {
+    margin-bottom: .5rem !important
+}
+
+#f .f-ml-2, #f .f-mx-2 {
+    margin-left: .5rem !important
+}
+
+#f .f-m-3 {
+    margin: 1rem !important
+}
+
+#f .f-mt-3, #f .f-my-3 {
+    margin-top: 1rem !important
+}
+
+#f .f-mr-3, #f .f-mx-3 {
+    margin-right: 1rem !important
+}
+
+#f .f-mb-3, #f .f-my-3 {
+    margin-bottom: 1rem !important
+}
+
+#f .f-ml-3, #f .f-mx-3 {
+    margin-left: 1rem !important
+}
+
+#f .f-m-4 {
+    margin: 1.5rem !important
+}
+
+#f .f-mt-4, #f .f-my-4 {
+    margin-top: 1.5rem !important
+}
+
+#f .f-mr-4, #f .f-mx-4 {
+    margin-right: 1.5rem !important
+}
+
+#f .f-mb-4, #f .f-my-4 {
+    margin-bottom: 1.5rem !important
+}
+
+#f .f-ml-4, #f .f-mx-4 {
+    margin-left: 1.5rem !important
+}
+
+#f .f-m-5 {
+    margin: 3rem !important
+}
+
+#f .f-mt-5, #f .f-my-5 {
+    margin-top: 3rem !important
+}
+
+#f .f-mr-5, #f .f-mx-5 {
+    margin-right: 3rem !important
+}
+
+#f .f-mb-5, #f .f-my-5 {
+    margin-bottom: 3rem !important
+}
+
+#f .f-ml-5, #f .f-mx-5 {
+    margin-left: 3rem !important
+}
+
+#f .f-p-0 {
+    padding: 0 !important
+}
+
+#f .f-pt-0, #f .f-py-0 {
+    padding-top: 0 !important
+}
+
+#f .f-pr-0, #f .f-px-0 {
+    padding-right: 0 !important
+}
+
+#f .f-pb-0, #f .f-py-0 {
+    padding-bottom: 0 !important
+}
+
+#f .f-pl-0, #f .f-px-0 {
+    padding-left: 0 !important
+}
+
+#f .f-p-1 {
+    padding: .25rem !important
+}
+
+#f .f-pt-1, #f .f-py-1 {
+    padding-top: .25rem !important
+}
+
+#f .f-pr-1, #f .f-px-1 {
+    padding-right: .25rem !important
+}
+
+#f .f-pb-1, #f .f-py-1 {
+    padding-bottom: .25rem !important
+}
+
+#f .f-pl-1, #f .f-px-1 {
+    padding-left: .25rem !important
+}
+
+#f .f-p-2 {
+    padding: .5rem !important
+}
+
+#f .f-pt-2, #f .f-py-2 {
+    padding-top: .5rem !important
+}
+
+#f .f-pr-2, #f .f-px-2 {
+    padding-right: .5rem !important
+}
+
+#f .f-pb-2, #f .f-py-2 {
+    padding-bottom: .5rem !important
+}
+
+#f .f-pl-2, #f .f-px-2 {
+    padding-left: .5rem !important
+}
+
+#f .f-p-3 {
+    padding: 1rem !important
+}
+
+#f .f-pt-3, #f .f-py-3 {
+    padding-top: 1rem !important
+}
+
+#f .f-pr-3, #f .f-px-3 {
+    padding-right: 1rem !important
+}
+
+#f .f-pb-3, #f .f-py-3 {
+    padding-bottom: 1rem !important
+}
+
+#f .f-pl-3, #f .f-px-3 {
+    padding-left: 1rem !important
+}
+
+#f .f-p-4 {
+    padding: 1.5rem !important
+}
+
+#f .f-pt-4, #f .f-py-4 {
+    padding-top: 1.5rem !important
+}
+
+#f .f-pr-4, #f .f-px-4 {
+    padding-right: 1.5rem !important
+}
+
+#f .f-pb-4, #f .f-py-4 {
+    padding-bottom: 1.5rem !important
+}
+
+#f .f-pl-4, #f .f-px-4 {
+    padding-left: 1.5rem !important
+}
+
+#f .f-p-5 {
+    padding: 3rem !important
+}
+
+#f .f-pt-5, #f .f-py-5 {
+    padding-top: 3rem !important
+}
+
+#f .f-pr-5, #f .f-px-5 {
+    padding-right: 3rem !important
+}
+
+#f .f-pb-5, #f .f-py-5 {
+    padding-bottom: 3rem !important
+}
+
+#f .f-pl-5, #f .f-px-5 {
+    padding-left: 3rem !important
+}
+
+#f .f-w-100 {
+    width: 100%
+}
+
+#f .f-text-right {
+    text-align: right
+}
+
+#f .f-text-center {
+    text-align: center
+}
+
+#f .f-align-items-center {
+    align-items: center
+}
+
+#f .f-overflow-hidden {
+    overflow: hidden
+}
+
+@media (min-width: 375px) {
+    #f .f-card {
+        padding: 5.875rem 0 1.1875rem 1rem
+    }
+}
+
+@media (min-width: 375px) {
+    #f .f-form-group-card .f-control-label {
+        margin-bottom: .1875rem;
+        font-size: .6875rem;
+        line-height: 1.125rem
+    }
+}
+
+@media (min-width: 375px) {
+    #f .f-form-group-card .f-form-control {
+        height: 1.5625rem;
+        font-size: 1.25rem;
+        line-height: 1.5625rem
+    }
+}
+
+@media (min-width: 375px) {
+    #f .f-form-group-card .f-form-control:-webkit-autofill:first-line {
+        font-size: 1.25rem;
+        line-height: 1.5625rem
+    }
+}
+
+@media (min-width: 375px) {
+    #f .f-amount {
+        font-size: 2rem
+    }
+}
+
+@media (min-width: 375px) {
+    #f .f-currency {
+        font-size: 1.375rem
+    }
+}
+
+@media (min-width: 375px) {
+    #f .f-container-sm {
+        width: 100%;
+        max-width: 335px
+    }
+}
+
+@media (min-width: 375px) {
+    #f .f-fast-access-icon {
+        margin-right: 23px
+    }
+
+    #f .f-fast-access-icon:nth-child(5n) {
+        margin-right: 0
+    }
+}
+
+@media (min-width: 375px) {
+    #f .f-placeholder {
+        font-size: 1.25rem;
+        line-height: 1.5625rem
+    }
+}
+
+@media (min-width: 576px) {
+    #f .f-container-sm {
+        max-width: 360px
+    }
+}
+
+@media (min-width: 576px) {
+    #f .f-bank-item {
+        flex: 0 0 50%;
+        max-width: 50%
+    }
+}
+
+@media (min-width: 576px) {
+    #f .f-bank-country {
+        flex: 0 0 13.75rem;
+        max-width: 13.75rem
+    }
+}
+
+@media (min-width: 576px) {
+    #f .f-bank-search {
+        flex: 0 0 calc(100% - 20rem);
+        max-width: calc(100% - 20rem)
+    }
+}
+
+@media (min-width: 576px) {
+    #f .f-bank-view {
+        flex: 0 0 6.25rem;
+        max-width: 6.25rem
+    }
+}
+
+@media (min-width: 576px) {
+    #f .f-fast-access-icon {
+        margin-right: 30px
+    }
+}
+
+@media (min-width: 576px) {
+    #f .f-receipt-row {
+        display: flex
+    }
+}
+
+@media (min-width: 576px) {
+    #f .f-receipt-key {
+        flex: 0 0 160px
+    }
+}
+
+html .ipsp-modal {
+    width: 100%;
+    max-width: 590px
+}
+
+html .ipsp-modal-close {
+    position: absolute;
+    top: 0;
+    right: 0
+}
+
+html .ipsp-modal-content {
+    min-height: 600px
+}
+
+html .ipsp-modal-iframe {
+    height: 600px
+}
+
+#f {
+    --fondy-warning: hsl(36, 92.2%, 50%);
+    --fondy-warning-h: 36;
+    --fondy-warning-s: 92.2%;
+    --fondy-warning-l: 50%;
+    --fondy-input_error_color: hsl(350, 69.6%, 57.5%);
+    --fondy-input_error_color-h: 350;
+    --fondy-input_error_color-s: 69.6%;
+    --fondy-input_error_color-l: 57.5%;
+    --fondy-input_error_border: hsl(350, 69.6%, 57.5%);
+    --fondy-input_error_border-h: 350;
+    --fondy-input_error_border-s: 69.6%;
+    --fondy-input_error_border-l: 57.5%;
+    --fondy-text_error_color: hsl(350, 69.6%, 57.5%);
+    --fondy-text_error_color-h: 350;
+    --fondy-text_error_color-s: 69.6%;
+    --fondy-text_error_color-l: 57.5%;
+    --fondy-tooltip_error_color: hsl(350, 69.6%, 57.5%);
+    --fondy-tooltip_error_color-h: 350;
+    --fondy-tooltip_error_color-s: 69.6%;
+    --fondy-tooltip_error_color-l: 57.5%;
+    --fondy-card_bg: hsl(204, 3.5%, 27.6%);
+    --fondy-card_bg-h: 204;
+    --fondy-card_bg-s: 3.5%;
+    --fondy-card_bg-l: 27.6%;
+    --fondy-card_label_color: hsl(0, 0%, 100%);
+    --fondy-card_label_color-h: 0;
+    --fondy-card_label_color-s: 0%;
+    --fondy-card_label_color-l: 100%;
+    --fondy-card_input_color: hsl(0, 0%, 100%);
+    --fondy-card_input_color-h: 0;
+    --fondy-card_input_color-s: 0%;
+    --fondy-card_input_color-l: 100%;
+    --fondy-card_input_shadow: hsl(0, 0%, 0%);
+    --fondy-card_input_shadow-h: 0;
+    --fondy-card_input_shadow-s: 0%;
+    --fondy-card_input_shadow-l: 0%;
+    --fondy-card_list_item_active_bg: hsl(210, 13.3%, 94.1%);
+    --fondy-card_list_item_active_bg-h: 210;
+    --fondy-card_list_item_active_bg-s: 13.3%;
+    --fondy-card_list_item_active_bg-l: 94.1%;
+    --fondy-card_list_number_color: hsl(0, 0%, 23.9%);
+    --fondy-card_list_number_color-h: 0;
+    --fondy-card_list_number_color-s: 0%;
+    --fondy-card_list_number_color-l: 23.9%;
+    --fondy-card_list_expiry_date_color: hsl(212, 10.5%, 55.3%);
+    --fondy-card_list_expiry_date_color-h: 212;
+    --fondy-card_list_expiry_date_color-s: 10.5%;
+    --fondy-card_list_expiry_date_color-l: 55.3%;
+    --fondy-btn_success_color: hsl(0, 0%, 100%);
+    --fondy-btn_success_color-h: 0;
+    --fondy-btn_success_color-s: 0%;
+    --fondy-btn_success_color-l: 100%;
+    --fondy-btn_success_bg: hsl(204, 3.5%, 27.6%);
+    --fondy-btn_success_bg-h: 204;
+    --fondy-btn_success_bg-s: 3.5%;
+    --fondy-btn_success_bg-l: 27.6%;
+    --fondy-btn_secondary_color: hsl(213, 10.9%, 39.6%);
+    --fondy-btn_secondary_color-h: 213;
+    --fondy-btn_secondary_color-s: 10.9%;
+    --fondy-btn_secondary_color-l: 39.6%;
+    --fondy-btn_secondary_bg: hsl(213, 15.1%, 85.7%);
+    --fondy-btn_secondary_bg-h: 213;
+    --fondy-btn_secondary_bg-s: 15.1%;
+    --fondy-btn_secondary_bg-l: 85.7%;
+    --fondy-btn_secondary_hover_color: hsl(212, 9.4%, 31.2%);
+    --fondy-btn_secondary_hover_color-h: 212;
+    --fondy-btn_secondary_hover_color-s: 9.4%;
+    --fondy-btn_secondary_hover_color-l: 31.2%;
+    --fondy-btn_secondary_hover_bg: hsl(212, 13.4%, 81%);
+    --fondy-btn_secondary_hover_bg-h: 212;
+    --fondy-btn_secondary_hover_bg-s: 13.4%;
+    --fondy-btn_secondary_hover_bg-l: 81%;
+    --fondy-btn_secondary_hover_shadow: hsl(210, 13%, 91%);
+    --fondy-btn_secondary_hover_shadow-h: 210;
+    --fondy-btn_secondary_hover_shadow-s: 13%;
+    --fondy-btn_secondary_hover_shadow-l: 91%;
+    --fondy-btn_secondary_active_color: hsl(212, 9.4%, 31.2%);
+    --fondy-btn_secondary_active_color-h: 212;
+    --fondy-btn_secondary_active_color-s: 9.4%;
+    --fondy-btn_secondary_active_color-l: 31.2%;
+    --fondy-btn_secondary_active_bg: hsl(213, 13.2%, 70.2%);
+    --fondy-btn_secondary_active_bg-h: 213;
+    --fondy-btn_secondary_active_bg-s: 13.2%;
+    --fondy-btn_secondary_active_bg-l: 70.2%;
+    --fondy-btn_secondary_active_shadow: hsl(212, 13.4%, 81%);
+    --fondy-btn_secondary_active_shadow-h: 212;
+    --fondy-btn_secondary_active_shadow-s: 13.4%;
+    --fondy-btn_secondary_active_shadow-l: 81%;
+    --fondy-btn_light_bg: hsl(0, 0%, 100%);
+    --fondy-btn_light_bg-h: 0;
+    --fondy-btn_light_bg-s: 0%;
+    --fondy-btn_light_bg-l: 100%;
+    --fondy-btn_light_color: hsl(0, 0%, 0%);
+    --fondy-btn_light_color-h: 0;
+    --fondy-btn_light_color-s: 0%;
+    --fondy-btn_light_color-l: 0%;
+    --fondy-btn_dark_bg: hsl(0, 0%, 0%);
+    --fondy-btn_dark_bg-h: 0;
+    --fondy-btn_dark_bg-s: 0%;
+    --fondy-btn_dark_bg-l: 0%;
+    --fondy-btn_dark_color: hsl(0, 0%, 100%);
+    --fondy-btn_dark_color-h: 0;
+    --fondy-btn_dark_color-s: 0%;
+    --fondy-btn_dark_color-l: 100%;
+    --fondy-tooltip_card_color: hsl(212, 10.5%, 55.3%);
+    --fondy-tooltip_card_color-h: 212;
+    --fondy-tooltip_card_color-s: 10.5%;
+    --fondy-tooltip_card_color-l: 55.3%;
+    --fondy-tooltip_cvv_color: hsl(213, 10.9%, 39.6%);
+    --fondy-tooltip_cvv_color-h: 213;
+    --fondy-tooltip_cvv_color-s: 10.9%;
+    --fondy-tooltip_cvv_color-l: 39.6%;
+    --fondy-tooltip_secondary_bg: hsl(0, 0%, 100%);
+    --fondy-tooltip_secondary_bg-h: 0;
+    --fondy-tooltip_secondary_bg-s: 0%;
+    --fondy-tooltip_secondary_bg-l: 100%;
+    --fondy-icon_color: hsl(213, 13.2%, 70.2%);
+    --fondy-icon_color-h: 213;
+    --fondy-icon_color-s: 13.2%;
+    --fondy-icon_color-l: 70.2%;
+    --fondy-close_color: hsl(0, 0%, 100%);
+    --fondy-close_color-h: 0;
+    --fondy-close_color-s: 0%;
+    --fondy-close_color-l: 100%;
+    --fondy-modal_backdrop_bg: hsl(217, 7.4%, 21.2%);
+    --fondy-modal_backdrop_bg-h: 217;
+    --fondy-modal_backdrop_bg-s: 7.4%;
+    --fondy-modal_backdrop_bg-l: 21.2%;
+    --fondy-modal_content_color: hsl(213, 10.9%, 39.6%);
+    --fondy-modal_content_color-h: 213;
+    --fondy-modal_content_color-s: 10.9%;
+    --fondy-modal_content_color-l: 39.6%;
+    --fondy-modal_content_bg: hsl(0, 0%, 100%);
+    --fondy-modal_content_bg-h: 0;
+    --fondy-modal_content_bg-s: 0%;
+    --fondy-modal_content_bg-l: 100%;
+    --fondy-modal_title_color: hsl(0, 0%, 23.9%);
+    --fondy-modal_title_color-h: 0;
+    --fondy-modal_title_color-s: 0%;
+    --fondy-modal_title_color-l: 23.9%;
+    --fondy-modal_security_title_color: hsl(213, 10.9%, 39.6%);
+    --fondy-modal_security_title_color-h: 213;
+    --fondy-modal_security_title_color-s: 10.9%;
+    --fondy-modal_security_title_color-l: 39.6%;
+    --fondy-modal_security_title_svg_color: hsl(211, 13.1%, 65.7%);
+    --fondy-modal_security_title_svg_color-h: 211;
+    --fondy-modal_security_title_svg_color-s: 13.1%;
+    --fondy-modal_security_title_svg_color-l: 65.7%;
+    --fondy-datepicker_shadow: hsl(210, 7.5%, 20.8%);
+    --fondy-datepicker_shadow-h: 210;
+    --fondy-datepicker_shadow-s: 7.5%;
+    --fondy-datepicker_shadow-l: 20.8%;
+    --fondy-datepicker_bg: hsl(0, 0%, 100%);
+    --fondy-datepicker_bg-h: 0;
+    --fondy-datepicker_bg-s: 0%;
+    --fondy-datepicker_bg-l: 100%;
+    --fondy-datepicker_cell_color: hsl(212, 10.5%, 55.3%);
+    --fondy-datepicker_cell_color-h: 212;
+    --fondy-datepicker_cell_color-s: 10.5%;
+    --fondy-datepicker_cell_color-l: 55.3%;
+    --fondy-datepicker_cell_today_color: hsl(213, 10.9%, 39.6%);
+    --fondy-datepicker_cell_today_color-h: 213;
+    --fondy-datepicker_cell_today_color-s: 10.9%;
+    --fondy-datepicker_cell_today_color-l: 39.6%;
+    --fondy-datepicker_cell_today_bg: hsl(210, 13.3%, 94.1%);
+    --fondy-datepicker_cell_today_bg-h: 210;
+    --fondy-datepicker_cell_today_bg-s: 13.3%;
+    --fondy-datepicker_cell_today_bg-l: 94.1%;
+    --fondy-datepicker_cell_hover_color: hsl(213, 10.9%, 39.6%);
+    --fondy-datepicker_cell_hover_color-h: 213;
+    --fondy-datepicker_cell_hover_color-s: 10.9%;
+    --fondy-datepicker_cell_hover_color-l: 39.6%;
+    --fondy-datepicker_cell_hover_bg: hsl(213, 15.1%, 85.7%);
+    --fondy-datepicker_cell_hover_bg-h: 213;
+    --fondy-datepicker_cell_hover_bg-s: 15.1%;
+    --fondy-datepicker_cell_hover_bg-l: 85.7%;
+    --fondy-datepicker_cell_active_color: hsl(0, 0%, 100%);
+    --fondy-datepicker_cell_active_color-h: 0;
+    --fondy-datepicker_cell_active_color-s: 0%;
+    --fondy-datepicker_cell_active_color-l: 100%;
+    --fondy-datepicker_cell_active_bg: hsl(213, 13.2%, 70.2%);
+    --fondy-datepicker_cell_active_bg-h: 213;
+    --fondy-datepicker_cell_active_bg-s: 13.2%;
+    --fondy-datepicker_cell_active_bg-l: 70.2%;
+    --fondy-datepicker_cell_disabled_color: hsl(210, 13%, 91%);
+    --fondy-datepicker_cell_disabled_color-h: 210;
+    --fondy-datepicker_cell_disabled_color-s: 13%;
+    --fondy-datepicker_cell_disabled_color-l: 91%;
+    --fondy-datepicker_cell_not_current_month_color: hsl(213, 15.1%, 85.7%);
+    --fondy-datepicker_cell_not_current_month_color-h: 213;
+    --fondy-datepicker_cell_not_current_month_color-s: 15.1%;
+    --fondy-datepicker_cell_not_current_month_color-l: 85.7%;
+    --fondy-datepicker_th_color: hsl(214, 13.1%, 76.1%);
+    --fondy-datepicker_th_color-h: 214;
+    --fondy-datepicker_th_color-s: 13.1%;
+    --fondy-datepicker_th_color-l: 76.1%;
+    --fondy-datepicker_btn_text_color: hsl(0, 0%, 23.9%);
+    --fondy-datepicker_btn_text_color-h: 0;
+    --fondy-datepicker_btn_text_color-s: 0%;
+    --fondy-datepicker_btn_text_color-l: 23.9%;
+    --fondy-main_bg: hsl(210, 13%, 91%);
+    --fondy-main_bg-h: 210;
+    --fondy-main_bg-s: 13%;
+    --fondy-main_bg-l: 91%;
+    --fondy-main_color: hsl(212, 10.5%, 55.3%);
+    --fondy-main_color-h: 212;
+    --fondy-main_color-s: 10.5%;
+    --fondy-main_color-l: 55.3%;
+    --fondy-container_bg: hsl(0, 0%, 100%);
+    --fondy-container_bg-h: 0;
+    --fondy-container_bg-s: 0%;
+    --fondy-container_bg-l: 100%;
+    --fondy-container_box_shadow: hsl(212, 13.4%, 81%);
+    --fondy-container_box_shadow-h: 212;
+    --fondy-container_box_shadow-s: 13.4%;
+    --fondy-container_box_shadow-l: 81%;
+    --fondy-sidebar_border: hsl(210, 13%, 91%);
+    --fondy-sidebar_border-h: 210;
+    --fondy-sidebar_border-s: 13%;
+    --fondy-sidebar_border-l: 91%;
+    --fondy-title_color: hsl(0, 0%, 23.9%);
+    --fondy-title_color-h: 0;
+    --fondy-title_color-s: 0%;
+    --fondy-title_color-l: 23.9%;
+    --fondy-menu_item_color: hsl(0, 0%, 23.9%);
+    --fondy-menu_item_color-h: 0;
+    --fondy-menu_item_color-s: 0%;
+    --fondy-menu_item_color-l: 23.9%;
+    --fondy-menu_item_lg_color: hsl(212, 10.5%, 55.3%);
+    --fondy-menu_item_lg_color-h: 212;
+    --fondy-menu_item_lg_color-s: 10.5%;
+    --fondy-menu_item_lg_color-l: 55.3%;
+    --fondy-menu_item_border: hsl(210, 13%, 91%);
+    --fondy-menu_item_border-h: 210;
+    --fondy-menu_item_border-s: 13%;
+    --fondy-menu_item_border-l: 91%;
+    --fondy-menu_icon_color: hsl(212, 10.5%, 55.3%);
+    --fondy-menu_icon_color-h: 212;
+    --fondy-menu_icon_color-s: 10.5%;
+    --fondy-menu_icon_color-l: 55.3%;
+    --fondy-menu_icon_lg_color: hsl(213, 15.1%, 85.7%);
+    --fondy-menu_icon_lg_color-h: 213;
+    --fondy-menu_icon_lg_color-s: 15.1%;
+    --fondy-menu_icon_lg_color-l: 85.7%;
+    --fondy-menu_item_hover_bg: hsl(210, 14.3%, 97.3%);
+    --fondy-menu_item_hover_bg-h: 210;
+    --fondy-menu_item_hover_bg-s: 14.3%;
+    --fondy-menu_item_hover_bg-l: 97.3%;
+    --fondy-menu_item_active_color: hsl(0, 0%, 23.9%);
+    --fondy-menu_item_active_color-h: 0;
+    --fondy-menu_item_active_color-s: 0%;
+    --fondy-menu_item_active_color-l: 23.9%;
+    --fondy-menu_item_active_bg: hsl(220, 13%, 95.5%);
+    --fondy-menu_item_active_bg-h: 220;
+    --fondy-menu_item_active_bg-s: 13%;
+    --fondy-menu_item_active_bg-l: 95.5%;
+    --fondy-menu_icon_active_color: hsl(0, 0%, 23.9%);
+    --fondy-menu_icon_active_color-h: 0;
+    --fondy-menu_icon_active_color-s: 0%;
+    --fondy-menu_icon_active_color-l: 23.9%;
+    --fondy-menu_icons_shadow: hsl(215, 12.8%, 81.6%);
+    --fondy-menu_icons_shadow-h: 215;
+    --fondy-menu_icons_shadow-s: 12.8%;
+    --fondy-menu_icons_shadow-l: 81.6%;
+    --fondy-menu_count_color: hsl(212, 10.5%, 55.3%);
+    --fondy-menu_count_color-h: 212;
+    --fondy-menu_count_color-s: 10.5%;
+    --fondy-menu_count_color-l: 55.3%;
+    --fondy-menu_count_active_color: hsl(212, 9.4%, 31.2%);
+    --fondy-menu_count_active_color-h: 212;
+    --fondy-menu_count_active_color-s: 9.4%;
+    --fondy-menu_count_active_color-l: 31.2%;
+    --fondy-menu_count_bg: hsl(220, 13%, 95.5%);
+    --fondy-menu_count_bg-h: 220;
+    --fondy-menu_count_bg-s: 13%;
+    --fondy-menu_count_bg-l: 95.5%;
+    --fondy-menu_count_active_bg: hsl(0, 0%, 100%);
+    --fondy-menu_count_active_bg-h: 0;
+    --fondy-menu_count_active_bg-s: 0%;
+    --fondy-menu_count_active_bg-l: 100%;
+    --fondy-merchant_name_color: hsl(214, 13.1%, 76.1%);
+    --fondy-merchant_name_color-h: 214;
+    --fondy-merchant_name_color-s: 13.1%;
+    --fondy-merchant_name_color-l: 76.1%;
+    --fondy-merchant_url_color: hsl(214, 13.1%, 76.1%);
+    --fondy-merchant_url_color-h: 214;
+    --fondy-merchant_url_color-s: 13.1%;
+    --fondy-merchant_url_color-l: 76.1%;
+    --fondy-order_desc_color: hsl(212, 10.5%, 55.3%);
+    --fondy-order_desc_color-h: 212;
+    --fondy-order_desc_color-s: 10.5%;
+    --fondy-order_desc_color-l: 55.3%;
+    --fondy-order_desc_more_color: hsl(213, 10.9%, 39.6%);
+    --fondy-order_desc_more_color-h: 213;
+    --fondy-order_desc_more_color-s: 10.9%;
+    --fondy-order_desc_more_color-l: 39.6%;
+    --fondy-amount_color: hsl(0, 0%, 23.9%);
+    --fondy-amount_color-h: 0;
+    --fondy-amount_color-s: 0%;
+    --fondy-amount_color-l: 23.9%;
+    --fondy-fee_color: hsl(214, 13.1%, 76.1%);
+    --fondy-fee_color-h: 214;
+    --fondy-fee_color-s: 13.1%;
+    --fondy-fee_color-l: 76.1%;
+    --fondy-currency_color: hsl(211, 13.1%, 65.7%);
+    --fondy-currency_color-h: 211;
+    --fondy-currency_color-s: 13.1%;
+    --fondy-currency_color-l: 65.7%;
+    --fondy-card_shadow: hsl(210, 7.5%, 20.8%);
+    --fondy-card_shadow-h: 210;
+    --fondy-card_shadow-s: 7.5%;
+    --fondy-card_shadow-l: 20.8%;
+    --fondy-btn_success_shadow: hsl(140, 67.6%, 51.6%);
+    --fondy-btn_success_shadow-h: 140;
+    --fondy-btn_success_shadow-s: 67.6%;
+    --fondy-btn_success_shadow-l: 51.6%;
+    --fondy-btn_default_color: hsl(213, 10.9%, 39.6%);
+    --fondy-btn_default_color-h: 213;
+    --fondy-btn_default_color-s: 10.9%;
+    --fondy-btn_default_color-l: 39.6%;
+    --fondy-btn_default_bg: hsl(213, 15.1%, 85.7%);
+    --fondy-btn_default_bg-h: 213;
+    --fondy-btn_default_bg-s: 15.1%;
+    --fondy-btn_default_bg-l: 85.7%;
+    --fondy-btn_default_hover_color: hsl(212, 9.4%, 31.2%);
+    --fondy-btn_default_hover_color-h: 212;
+    --fondy-btn_default_hover_color-s: 9.4%;
+    --fondy-btn_default_hover_color-l: 31.2%;
+    --fondy-btn_default_hover_bg: hsl(212, 13.4%, 81%);
+    --fondy-btn_default_hover_bg-h: 212;
+    --fondy-btn_default_hover_bg-s: 13.4%;
+    --fondy-btn_default_hover_bg-l: 81%;
+    --fondy-btn_default_hover_shadow: hsl(210, 13%, 91%);
+    --fondy-btn_default_hover_shadow-h: 210;
+    --fondy-btn_default_hover_shadow-s: 13%;
+    --fondy-btn_default_hover_shadow-l: 91%;
+    --fondy-btn_default_active_color: hsl(212, 9.4%, 31.2%);
+    --fondy-btn_default_active_color-h: 212;
+    --fondy-btn_default_active_color-s: 9.4%;
+    --fondy-btn_default_active_color-l: 31.2%;
+    --fondy-btn_default_active_bg: hsl(213, 13.2%, 70.2%);
+    --fondy-btn_default_active_bg-h: 213;
+    --fondy-btn_default_active_bg-s: 13.2%;
+    --fondy-btn_default_active_bg-l: 70.2%;
+    --fondy-btn_default_active_shadow: hsl(212, 13.4%, 81%);
+    --fondy-btn_default_active_shadow-h: 212;
+    --fondy-btn_default_active_shadow-s: 13.4%;
+    --fondy-btn_default_active_shadow-l: 81%;
+    --fondy-btn_outline_bg: hsl(0, 0%, 100%);
+    --fondy-btn_outline_bg-h: 0;
+    --fondy-btn_outline_bg-s: 0%;
+    --fondy-btn_outline_bg-l: 100%;
+    --fondy-btn_outline_border: hsl(213, 15.1%, 85.7%);
+    --fondy-btn_outline_border-h: 213;
+    --fondy-btn_outline_border-s: 15.1%;
+    --fondy-btn_outline_border-l: 85.7%;
+    --fondy-btn_outline_color: hsl(212, 10.5%, 55.3%);
+    --fondy-btn_outline_color-h: 212;
+    --fondy-btn_outline_color-s: 10.5%;
+    --fondy-btn_outline_color-l: 55.3%;
+    --fondy-btn_outline_hover_bg: hsl(210, 14.3%, 97.3%);
+    --fondy-btn_outline_hover_bg-h: 210;
+    --fondy-btn_outline_hover_bg-s: 14.3%;
+    --fondy-btn_outline_hover_bg-l: 97.3%;
+    --fondy-btn_outline_hover_border: hsl(212, 13.4%, 81%);
+    --fondy-btn_outline_hover_border-h: 212;
+    --fondy-btn_outline_hover_border-s: 13.4%;
+    --fondy-btn_outline_hover_border-l: 81%;
+    --fondy-btn_outline_hover_color: hsl(212, 10.5%, 55.3%);
+    --fondy-btn_outline_hover_color-h: 212;
+    --fondy-btn_outline_hover_color-s: 10.5%;
+    --fondy-btn_outline_hover_color-l: 55.3%;
+    --fondy-btn_outline_active_bg: hsl(210, 13.3%, 94.1%);
+    --fondy-btn_outline_active_bg-h: 210;
+    --fondy-btn_outline_active_bg-s: 13.3%;
+    --fondy-btn_outline_active_bg-l: 94.1%;
+    --fondy-btn_outline_active_border: hsl(212, 13.4%, 81%);
+    --fondy-btn_outline_active_border-h: 212;
+    --fondy-btn_outline_active_border-s: 13.4%;
+    --fondy-btn_outline_active_border-l: 81%;
+    --fondy-btn_outline_active_color: hsl(212, 10.5%, 55.3%);
+    --fondy-btn_outline_active_color-h: 212;
+    --fondy-btn_outline_active_color-s: 10.5%;
+    --fondy-btn_outline_active_color-l: 55.3%;
+    --fondy-btn_disabled_color: hsl(214, 13.1%, 76.1%);
+    --fondy-btn_disabled_color-h: 214;
+    --fondy-btn_disabled_color-s: 13.1%;
+    --fondy-btn_disabled_color-l: 76.1%;
+    --fondy-btn_disabled_bg: hsl(210, 13.3%, 94.1%);
+    --fondy-btn_disabled_bg-h: 210;
+    --fondy-btn_disabled_bg-s: 13.3%;
+    --fondy-btn_disabled_bg-l: 94.1%;
+    --fondy-btn_link_default_color: hsl(212, 10.5%, 55.3%);
+    --fondy-btn_link_default_color-h: 212;
+    --fondy-btn_link_default_color-s: 10.5%;
+    --fondy-btn_link_default_color-l: 55.3%;
+    --fondy-btn_link_default_hover_color: hsl(212, 9.4%, 31.2%);
+    --fondy-btn_link_default_hover_color-h: 212;
+    --fondy-btn_link_default_hover_color-s: 9.4%;
+    --fondy-btn_link_default_hover_color-l: 31.2%;
+    --fondy-btn_link_default_active_color: hsl(212, 13.4%, 81%);
+    --fondy-btn_link_default_active_color-h: 212;
+    --fondy-btn_link_default_active_color-s: 13.4%;
+    --fondy-btn_link_default_active_color-l: 81%;
+    --fondy-btn_link_secondary_color: hsl(213, 15.1%, 85.7%);
+    --fondy-btn_link_secondary_color-h: 213;
+    --fondy-btn_link_secondary_color-s: 15.1%;
+    --fondy-btn_link_secondary_color-l: 85.7%;
+    --fondy-btn_link_secondary_hover_color: hsl(0, 0%, 100%);
+    --fondy-btn_link_secondary_hover_color-h: 0;
+    --fondy-btn_link_secondary_hover_color-s: 0%;
+    --fondy-btn_link_secondary_hover_color-l: 100%;
+    --fondy-btn_link_secondary_active_color: hsl(213, 13.2%, 70.2%);
+    --fondy-btn_link_secondary_active_color-h: 213;
+    --fondy-btn_link_secondary_active_color-s: 13.2%;
+    --fondy-btn_link_secondary_active_color-l: 70.2%;
+    --fondy-input_bg: hsl(0, 0%, 100%);
+    --fondy-input_bg-h: 0;
+    --fondy-input_bg-s: 0%;
+    --fondy-input_bg-l: 100%;
+    --fondy-input_color: hsl(0, 0%, 23.9%);
+    --fondy-input_color-h: 0;
+    --fondy-input_color-s: 0%;
+    --fondy-input_color-l: 23.9%;
+    --fondy-input_border: hsl(213, 15.1%, 85.7%);
+    --fondy-input_border-h: 213;
+    --fondy-input_border-s: 15.1%;
+    --fondy-input_border-l: 85.7%;
+    --fondy-input_hover_bg: hsl(0, 0%, 100%);
+    --fondy-input_hover_bg-h: 0;
+    --fondy-input_hover_bg-s: 0%;
+    --fondy-input_hover_bg-l: 100%;
+    --fondy-input_hover_border: hsl(214, 13.1%, 76.1%);
+    --fondy-input_hover_border-h: 214;
+    --fondy-input_hover_border-s: 13.1%;
+    --fondy-input_hover_border-l: 76.1%;
+    --fondy-input_focus_border: hsl(212, 10.5%, 55.3%);
+    --fondy-input_focus_border-h: 212;
+    --fondy-input_focus_border-s: 10.5%;
+    --fondy-input_focus_border-l: 55.3%;
+    --fondy-input_readonly_color: hsl(211, 13.1%, 65.7%);
+    --fondy-input_readonly_color-h: 211;
+    --fondy-input_readonly_color-s: 13.1%;
+    --fondy-input_readonly_color-l: 65.7%;
+    --fondy-input_prepend_color: hsl(0, 0%, 23.9%);
+    --fondy-input_prepend_color-h: 0;
+    --fondy-input_prepend_color-s: 0%;
+    --fondy-input_prepend_color-l: 23.9%;
+    --fondy-checkbox_default_border: hsl(213, 13.2%, 70.2%);
+    --fondy-checkbox_default_border-h: 213;
+    --fondy-checkbox_default_border-s: 13.2%;
+    --fondy-checkbox_default_border-l: 70.2%;
+    --fondy-checkbox_default_hover_bg: hsl(210, 13.3%, 94.1%);
+    --fondy-checkbox_default_hover_bg-h: 210;
+    --fondy-checkbox_default_hover_bg-s: 13.3%;
+    --fondy-checkbox_default_hover_bg-l: 94.1%;
+    --fondy-checkbox_default_hover_border: hsl(213, 13.2%, 70.2%);
+    --fondy-checkbox_default_hover_border-h: 213;
+    --fondy-checkbox_default_hover_border-s: 13.2%;
+    --fondy-checkbox_default_hover_border-l: 70.2%;
+    --fondy-checkbox_default_hover_color: hsl(213, 15.1%, 85.7%);
+    --fondy-checkbox_default_hover_color-h: 213;
+    --fondy-checkbox_default_hover_color-s: 15.1%;
+    --fondy-checkbox_default_hover_color-l: 85.7%;
+    --fondy-checkbox_default_checked_bg: hsl(212, 10.5%, 55.3%);
+    --fondy-checkbox_default_checked_bg-h: 212;
+    --fondy-checkbox_default_checked_bg-s: 10.5%;
+    --fondy-checkbox_default_checked_bg-l: 55.3%;
+    --fondy-checkbox_default_checked_color: hsl(0, 0%, 100%);
+    --fondy-checkbox_default_checked_color-h: 0;
+    --fondy-checkbox_default_checked_color-s: 0%;
+    --fondy-checkbox_default_checked_color-l: 100%;
+    --fondy-checkbox_secondary_border: hsl(213, 15.1%, 85.7%);
+    --fondy-checkbox_secondary_border-h: 213;
+    --fondy-checkbox_secondary_border-s: 15.1%;
+    --fondy-checkbox_secondary_border-l: 85.7%;
+    --fondy-checkbox_secondary_hover_bg: hsl(212, 10.5%, 55.3%);
+    --fondy-checkbox_secondary_hover_bg-h: 212;
+    --fondy-checkbox_secondary_hover_bg-s: 10.5%;
+    --fondy-checkbox_secondary_hover_bg-l: 55.3%;
+    --fondy-checkbox_secondary_hover_border: hsl(213, 15.1%, 85.7%);
+    --fondy-checkbox_secondary_hover_border-h: 213;
+    --fondy-checkbox_secondary_hover_border-s: 15.1%;
+    --fondy-checkbox_secondary_hover_border-l: 85.7%;
+    --fondy-checkbox_secondary_hover_color: hsl(211, 13.1%, 65.7%);
+    --fondy-checkbox_secondary_hover_color-h: 211;
+    --fondy-checkbox_secondary_hover_color-s: 13.1%;
+    --fondy-checkbox_secondary_hover_color-l: 65.7%;
+    --fondy-checkbox_secondary_checked_bg: hsl(0, 0%, 100%);
+    --fondy-checkbox_secondary_checked_bg-h: 0;
+    --fondy-checkbox_secondary_checked_bg-s: 0%;
+    --fondy-checkbox_secondary_checked_bg-l: 100%;
+    --fondy-checkbox_secondary_checked_color: hsl(210, 8.6%, 45.5%);
+    --fondy-checkbox_secondary_checked_color-h: 210;
+    --fondy-checkbox_secondary_checked_color-s: 8.6%;
+    --fondy-checkbox_secondary_checked_color-l: 45.5%;
+    --fondy-checkbox_secondary_label_color: hsl(0, 0%, 100%);
+    --fondy-checkbox_secondary_label_color-h: 0;
+    --fondy-checkbox_secondary_label_color-s: 0%;
+    --fondy-checkbox_secondary_label_color-l: 100%;
+    --fondy-switch_bg: hsl(210, 13%, 91%);
+    --fondy-switch_bg-h: 210;
+    --fondy-switch_bg-s: 13%;
+    --fondy-switch_bg-l: 91%;
+    --fondy-switch_indicator_bg: hsl(0, 0%, 100%);
+    --fondy-switch_indicator_bg-h: 0;
+    --fondy-switch_indicator_bg-s: 0%;
+    --fondy-switch_indicator_bg-l: 100%;
+    --fondy-switch_hover_bg: hsl(212, 13.4%, 81%);
+    --fondy-switch_hover_bg-h: 212;
+    --fondy-switch_hover_bg-s: 13.4%;
+    --fondy-switch_hover_bg-l: 81%;
+    --fondy-switch_checked_bg: hsl(212, 10.5%, 55.3%);
+    --fondy-switch_checked_bg-h: 212;
+    --fondy-switch_checked_bg-s: 10.5%;
+    --fondy-switch_checked_bg-l: 55.3%;
+    --fondy-label_color: hsl(211, 13.1%, 65.7%);
+    --fondy-label_color-h: 211;
+    --fondy-label_color-s: 13.1%;
+    --fondy-label_color-l: 65.7%;
+    --fondy-label_hover_color: hsl(212, 10.5%, 55.3%);
+    --fondy-label_hover_color-h: 212;
+    --fondy-label_hover_color-s: 10.5%;
+    --fondy-label_hover_color-l: 55.3%;
+    --fondy-label_focus_color: hsl(212, 10.5%, 55.3%);
+    --fondy-label_focus_color-h: 212;
+    --fondy-label_focus_color-s: 10.5%;
+    --fondy-label_focus_color-l: 55.3%;
+    --fondy-link_color: hsl(212, 10.5%, 55.3%);
+    --fondy-link_color-h: 212;
+    --fondy-link_color-s: 10.5%;
+    --fondy-link_color-l: 55.3%;
+    --fondy-tooltip_default_bg: hsl(210, 7.5%, 20.8%);
+    --fondy-tooltip_default_bg-h: 210;
+    --fondy-tooltip_default_bg-s: 7.5%;
+    --fondy-tooltip_default_bg-l: 20.8%;
+    --fondy-tooltip_default_color: hsl(0, 0%, 100%);
+    --fondy-tooltip_default_color-h: 0;
+    --fondy-tooltip_default_color-s: 0%;
+    --fondy-tooltip_default_color-l: 100%;
+    --fondy-tooltip_secondary_shadow: hsl(220, 6.6%, 73.1%);
+    --fondy-tooltip_secondary_shadow-h: 220;
+    --fondy-tooltip_secondary_shadow-s: 6.6%;
+    --fondy-tooltip_secondary_shadow-l: 73.1%;
+    --fondy-tooltip_icons_shadow: hsl(210, 7.5%, 20.8%);
+    --fondy-tooltip_icons_shadow-h: 210;
+    --fondy-tooltip_icons_shadow-s: 7.5%;
+    --fondy-tooltip_icons_shadow-l: 20.8%;
+    --fondy-security_icon_color: hsl(214, 13.1%, 76.1%);
+    --fondy-security_icon_color-h: 214;
+    --fondy-security_icon_color-s: 13.1%;
+    --fondy-security_icon_color-l: 76.1%;
+    --fondy-security_color: hsl(213, 13.2%, 70.2%);
+    --fondy-security_color-h: 213;
+    --fondy-security_color-s: 13.2%;
+    --fondy-security_color-l: 70.2%;
+    --fondy-security_icon_hover_color: hsl(212, 10.5%, 55.3%);
+    --fondy-security_icon_hover_color-h: 212;
+    --fondy-security_icon_hover_color-s: 10.5%;
+    --fondy-security_icon_hover_color-l: 55.3%;
+    --fondy-security_hover_color: hsl(213, 10.9%, 39.6%);
+    --fondy-security_hover_color-h: 213;
+    --fondy-security_hover_color-s: 10.9%;
+    --fondy-security_hover_color-l: 39.6%;
+    --fondy-bank_item_color: hsl(212, 10.5%, 55.3%);
+    --fondy-bank_item_color-h: 212;
+    --fondy-bank_item_color-s: 10.5%;
+    --fondy-bank_item_color-l: 55.3%;
+    --fondy-bank_item_hover_color: hsl(212, 9.4%, 31.2%);
+    --fondy-bank_item_hover_color-h: 212;
+    --fondy-bank_item_hover_color-s: 9.4%;
+    --fondy-bank_item_hover_color-l: 31.2%;
+    --fondy-bank_icon_shadow: hsl(215, 12.8%, 81.6%);
+    --fondy-bank_icon_shadow-h: 215;
+    --fondy-bank_icon_shadow-s: 12.8%;
+    --fondy-bank_icon_shadow-l: 81.6%;
+    --fondy-bank_view_icon_active_bg: hsl(220, 13%, 95.5%);
+    --fondy-bank_view_icon_active_bg-h: 220;
+    --fondy-bank_view_icon_active_bg-s: 13%;
+    --fondy-bank_view_icon_active_bg-l: 95.5%;
+    --fondy-bank_view_icon_active_color: inherit;
+    --fondy-bank_select_bg: hsl(210, 13.3%, 94.1%);
+    --fondy-bank_select_bg-h: 210;
+    --fondy-bank_select_bg-s: 13.3%;
+    --fondy-bank_select_bg-l: 94.1%;
+    --fondy-bank_select_close_color: hsl(0, 0%, 23.9%);
+    --fondy-bank_select_close_color-h: 0;
+    --fondy-bank_select_close_color-s: 0%;
+    --fondy-bank_select_close_color-l: 23.9%;
+    --fondy-bank_select_close_hover_color: hsl(0, 0%, 23.9%);
+    --fondy-bank_select_close_hover_color-h: 0;
+    --fondy-bank_select_close_hover_color-s: 0%;
+    --fondy-bank_select_close_hover_color-l: 23.9%;
+    --fondy-alert_info_color: hsl(0, 0%, 100%);
+    --fondy-alert_info_color-h: 0;
+    --fondy-alert_info_color-s: 0%;
+    --fondy-alert_info_color-l: 100%;
+    --fondy-alert_info_bg: hsl(213, 10.9%, 39.6%);
+    --fondy-alert_info_bg-h: 213;
+    --fondy-alert_info_bg-s: 10.9%;
+    --fondy-alert_info_bg-l: 39.6%;
+    --fondy-alert_warning_bg: hsl(0, 0%, 100%);
+    --fondy-alert_warning_bg-h: 0;
+    --fondy-alert_warning_bg-s: 0%;
+    --fondy-alert_warning_bg-l: 100%;
+    --fondy-scrollbar_thumb_bg: hsl(212, 10.5%, 55.3%);
+    --fondy-scrollbar_thumb_bg-h: 212;
+    --fondy-scrollbar_thumb_bg-s: 10.5%;
+    --fondy-scrollbar_thumb_bg-l: 55.3%;
+    --fondy-receipt_props_bg: hsl(210, 14.3%, 97.3%);
+    --fondy-receipt_props_bg-h: 210;
+    --fondy-receipt_props_bg-s: 14.3%;
+    --fondy-receipt_props_bg-l: 97.3%;
+    --fondy-receipt_value_color: hsl(0, 0%, 23.9%);
+    --fondy-receipt_value_color-h: 0;
+    --fondy-receipt_value_color-s: 0%;
+    --fondy-receipt_value_color-l: 23.9%;
+    --fondy-logo_color: hsl(0, 0%, 0%);
+    --fondy-logo_color-h: 0;
+    --fondy-logo_color-s: 0%;
+    --fondy-logo_color-l: 0%;
+    --fondy-subscription_bg: hsl(220, 13%, 95.5%);
+    --fondy-subscription_bg-h: 220;
+    --fondy-subscription_bg-s: 13%;
+    --fondy-subscription_bg-l: 95.5%;
+    --fondy-outline_border: hsl(211, 13.1%, 65.7%);
+    --fondy-outline_border-h: 211;
+    --fondy-outline_border-s: 13.1%;
+    --fondy-outline_border-l: 65.7%;
+    --fondy-outline_bg: hsl(210, 13.3%, 94.1%);
+    --fondy-outline_bg-h: 210;
+    --fondy-outline_bg-s: 13.3%;
+    --fondy-outline_bg-l: 94.1%;
+    --fondy-outline_secondary_border: hsl(213, 13.2%, 70.2%);
+    --fondy-outline_secondary_border-h: 213;
+    --fondy-outline_secondary_border-s: 13.2%;
+    --fondy-outline_secondary_border-l: 70.2%;
+    --fondy-outline_secondary_bg: hsl(213, 10.9%, 39.6%);
+    --fondy-outline_secondary_bg-h: 213;
+    --fondy-outline_secondary_bg-s: 10.9%;
+    --fondy-outline_secondary_bg-l: 39.6%;
+    --fondy-main: hsl(204, 3.5%, 27.6%);
+    --fondy-main-h: 204;
+    --fondy-main-s: 3.5%;
+    --fondy-main-l: 27.6%;
+    --fondy-card_gradient_custom: linear-gradient(180deg, #606466 0%, #444749 35%, #181E22 100%);
+    --fondy-btn_success_gradient_custom: linear-gradient(90deg, #2FD769 30%, #1CB751 74%) #1CB751;
+}
