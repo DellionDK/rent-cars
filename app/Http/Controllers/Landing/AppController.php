@@ -108,7 +108,7 @@ class AppController extends Controller
 
         Call::create($req->validated());
 
-        Mail::to('arenda.mercedes.ua@gmail.com')->send(new CallMail($request->all()));
+       // Mail::to('arenda.mercedes.ua@gmail.com')->send(new CallMail($request->all()));
 
         return response()->json([
             'status' => true,
@@ -137,8 +137,8 @@ class AppController extends Controller
         }
         Order::create(array_merge(['driver' => $request->driver == true ? 1 : 0], $req->validated()));
 
-        Mail::to('arenda.mercedes.ua@gmail.com')->send(new OrderMail($request->all()));
-
+        //Mail::to('arenda.mercedes.ua@gmail.com')->send(new OrderMail($request->all()));
+        
         return response()->json([
             'status' => true,
             'redirect' =>route('landing.thanks.'.app()->getLocale())

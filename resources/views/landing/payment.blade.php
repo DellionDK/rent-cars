@@ -9,38 +9,39 @@
 
 
 {{--
-<script>
+    <script>
 
 
 
-    function checkoutInit(url) {
-        $ipsp('checkout').scope(function() {
-            this.setCheckoutWrapper('#checkout_wrapper');
-            this.addCallback(__DEFAULTCALLBACK__);
-            this.action('show', function(data) {
-                $('#checkout_loader').remove();
-                $('#checkout').show();
+        function checkoutInit(url) {
+            $ipsp('checkout').scope(function() {
+                this.setCheckoutWrapper('#checkout_wrapper');
+                this.addCallback(__DEFAULTCALLBACK__);
+                this.action('show', function(data) {
+                    $('#checkout_loader').remove();
+                    $('#checkout').show();
+                });
+                this.action('hide', function(data) {
+                    $('#checkout').hide();
+                });
+                this.action('resize', function(data) {
+                    $('#checkout_wrapper').width(480).height(data.height);
+                });
+                this.loadUrl(url);
             });
-            this.action('hide', function(data) {
-                $('#checkout').hide();
-            });
-            this.action('resize', function(data) {
-                $('#checkout_wrapper').width(480).height(data.height);
-            });
-            this.loadUrl(url);
-        });
-    };
+        };
 
 
-    let searchParams = new URLSearchParams(window.location.search);
-    let amount = searchParams.get("amount");
-    var button = $ipsp.get("button");
-    button.setMerchantId(1396424);
-    button.setResponseUrl('https://arenda-mercedes.kiev.ua/payment/' + searchParams.get("data") + '/success');
-    button.setAmount(amount, 'UAH', true);
-    button.setHost('pay.fondy.eu');
-    checkoutInit(button.getUrl());
-</script>--}}
+        let searchParams = new URLSearchParams(window.location.search);
+        let amount = searchParams.get("amount");
+        var button = $ipsp.get("button");
+        button.setMerchantId(1396424);
+        button.setResponseUrl('https://arenda-mercedes.kiev.ua/payment/' + searchParams.get("data") + '/success');
+        button.setAmount(amount, 'UAH', true);
+        button.setHost('pay.fondy.eu');
+        checkoutInit(button.getUrl());
+    </script>
+--}}
 
 <script>
 
