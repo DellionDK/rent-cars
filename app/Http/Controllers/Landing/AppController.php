@@ -50,7 +50,8 @@ class AppController extends Controller
      */
     public function car($car_url)
     {
-        if(strripos(strtolower(request()->url()), '/en') === false && strripos(strtolower(request()->url()), '/ru') === false) {
+        //dd(strripos(strtolower(request()->url()), '/ua'));
+        if(strripos(strtolower(request()->url()), '/en') === false && strripos(strtolower(request()->url()), '/ua') === false && strripos(strtolower(request()->url()), '/ru') === false) {
             return redirect(env("APP_URL")."/".ucfirst(App::getLocale())."/".request()->path());
         }
         $car = Car::where('url', $car_url)->first();
@@ -74,13 +75,25 @@ class AppController extends Controller
      */
     public function languageChange(Request $request, $locale)
     {
-        if (!in_array($locale, ['en', 'ru'])) {
+        if (!in_array($locale, ['en', 'ru', 'ua'])) {
             abort(400);
         }
         $request->session()->put('locale', $locale);
         App::setLocale($locale);
-        $locale = session()->get('locale') == "en" ? "en" : "";
-        return redirect("/".ucfirst($locale));
+        //dd(session()->get('locale') == "en" ? "en" : "" || "ua" ? "ua" : "");
+        
+        if ($locale === "en") {
+           $locale = session()->get('locale') == "en" ? "en" : ""; 
+        }else{
+            //dd($locale);
+            $locale = session()->get('locale') == "ua" ? "ua" : ""; 
+        }
+       
+       // $locale = session()->get('locale') ==  "ua" ? "ua" : "";
+        //dd($locale);
+        //return redirect("/".ucfirst($locale));
+
+        return redirect(url("/".$locale));
     }
 
 
@@ -256,6 +269,9 @@ class AppController extends Controller
 
         if($request->language == "en") {
             return view('landing.components.cars_card_en', ['cars' => $cars]);
+        }
+        if($request->language == "ua") {
+            return view('landing.components.cars_card_ua', ['cars' => $cars]);
         }
 
         return view('landing.components.cars_card', ['cars' => $cars]);
