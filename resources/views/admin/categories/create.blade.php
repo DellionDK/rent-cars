@@ -19,6 +19,10 @@
                     <input type="text" class="form-control form-control-lg" id="name_en" name="name_en" placeholder="Название категории" />
                 </div>
                 <div class="form-group">
+                    <label for="name">Название категории (UA):</label>
+                    <input type="text" class="form-control form-control-lg" id="name_ua" name="name_ua" placeholder="Название категории" />
+                </div>
+                <div class="form-group">
                     <label for="position">Позиция категории:</label>
                     <input type="text" class="form-control form-control-lg" id="position" name="position" placeholder="Позиция категории" />
                     <span class="text-muted text-small">Категории выводятся по порядку (1.. 2.. 3..)</span>
