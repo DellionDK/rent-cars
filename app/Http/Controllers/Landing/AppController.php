@@ -33,6 +33,7 @@ class AppController extends Controller
 
     public function oferta()
     {
+       // dd('landing.oferta_'.app()->getLocale());
         return view('landing.oferta_'.app()->getLocale());
     }
 
@@ -75,6 +76,7 @@ class AppController extends Controller
      */
     public function languageChange(Request $request, $locale)
     {
+        //dd($locale);
         if (!in_array($locale, ['en', 'ru', 'ua'])) {
             abort(400);
         }
@@ -86,11 +88,11 @@ class AppController extends Controller
            $locale = session()->get('locale') == "en" ? "en" : ""; 
         }else{
             //dd($locale);
-            $locale = session()->get('locale') == "ua" ? "ua" : ""; 
+            $locale = session()->get('locale') == "ru" ? "ru" : ""; 
         }
        
        // $locale = session()->get('locale') ==  "ua" ? "ua" : "";
-        //dd($locale);
+       // dd(url("/".$locale));
         //return redirect("/".ucfirst($locale));
 
         return redirect(url("/".$locale));
