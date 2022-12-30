@@ -33,7 +33,8 @@ class AppController extends Controller
 
     public function oferta()
     {
-       // dd('landing.oferta_'.app()->getLocale());
+        // dd('hello');
+        // dd('landing.oferta_'.app()->getLocale());
         return view('landing.oferta_'.app()->getLocale());
     }
 

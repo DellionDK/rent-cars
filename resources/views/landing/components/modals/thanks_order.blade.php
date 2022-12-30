@@ -9,3 +9,13 @@
     </div>
     <button data-fancybox-close="" class="fancybox-close-small"></button>
 </div>
+
+<style>
+    .calculate .yellow {
+        text-align: center !important;
+    }
+
+    .calculate p {
+        text-align: center !important;
+    }
+</style>

@@ -130,50 +130,37 @@ Route::group(['prefix' => 'admin'], function () {
 Route::group(['prefix' => 'en'], function () {
     Route::get('/', '\App\Http\Controllers\Landing\AppController@index')->name('landing.index.en');
     Route::get('/thanks', '\App\Http\Controllers\Landing\AppController@thanks')->name('landing.thanks.en');
+    Route::get('/404', '\App\Http\Controllers\Landing\AppController@notFound')->name('landing.404.en');
     Route::get('/contract', '\App\Http\Controllers\Landing\AppController@oferta')->name('landing.contract.en');
     Route::get('/{car_url?}', '\App\Http\Controllers\Landing\AppController@car')->name('landing.car.en');
-    Route::get('/404', '\App\Http\Controllers\Landing\AppController@notFound')->name('landing.404.en');
 });
 
 Route::group(['prefix' => 'Ru'], function () {
     Route::get('/404', '\App\Http\Controllers\Landing\AppController@notFound')->name('landing.404.ru');
-    Route::get('/{car_url}', '\App\Http\Controllers\Landing\AppController@car')->name('landing.car.ru');
     Route::get('/contract', '\App\Http\Controllers\Landing\AppController@oferta')->name('landing.contract.ru');
+    Route::get('/{car_url}', '\App\Http\Controllers\Landing\AppController@car')->name('landing.car.ru');
 });
 
 Route::group(['prefix' => 'ru'], function () {
     Route::get('/', '\App\Http\Controllers\Landing\AppController@index')->name('landing.index.ru');
     Route::get('/404', '\App\Http\Controllers\Landing\AppController@notFound')->name('landing.404.ru');
-    Route::get('/{car_url}', '\App\Http\Controllers\Landing\AppController@car')->name('landing.car.ru');
     Route::get('/contract', '\App\Http\Controllers\Landing\AppController@oferta')->name('landing.contract.ru');
-});
-
-Route::group(['prefix' => 'Ua'], function () {
-    Route::get('/404', '\App\Http\Controllers\Landing\AppController@notFound')->name('landing.404.ua');
-    Route::get('/{car_url}', '\App\Http\Controllers\Landing\AppController@car')->name('landing.car.ua');
-    Route::get('/contract', '\App\Http\Controllers\Landing\AppController@oferta')->name('landing.contract.ua');
-});
-
-Route::group(['prefix' => 'ua'], function () {
-    Route::get('/', '\App\Http\Controllers\Landing\AppController@index')->name('landing.index.ua');
-    Route::get('/404', '\App\Http\Controllers\Landing\AppController@notFound')->name('landing.404.ua');
-    Route::get('/{car_url}', '\App\Http\Controllers\Landing\AppController@car')->name('landing.car.ua');
-    Route::get('/contract', '\App\Http\Controllers\Landing\AppController@oferta')->name('landing.contract.ua');
+    Route::get('/{car_url}', '\App\Http\Controllers\Landing\AppController@car')->name('landing.car.ru');
 });
 
 Route::group(['prefix' => 'En'], function () {
     Route::get('/', '\App\Http\Controllers\Landing\AppController@index')->name('landing.index.en');
     Route::get('/thanks', '\App\Http\Controllers\Landing\AppController@thanks')->name('landing.thanks.en');
+    Route::get('/404', '\App\Http\Controllers\Landing\AppController@notFound')->name('landing.404.en');
     Route::get('/contract', '\App\Http\Controllers\Landing\AppController@oferta')->name('landing.contract.en');
     Route::get('/{car_url}', '\App\Http\Controllers\Landing\AppController@car')->name('landing.car.en');
-    Route::get('/404', '\App\Http\Controllers\Landing\AppController@notFound')->name('landing.404.en');
 });
 
-Route::get('/', '\App\Http\Controllers\Landing\AppController@index')->name('landing.index.ru');
-Route::get('/thanks', '\App\Http\Controllers\Landing\AppController@thanks')->name('landing.thanks.ru');
+Route::get('/', '\App\Http\Controllers\Landing\AppController@index')->name('landing.index.ua');
+Route::get('/thanks', '\App\Http\Controllers\Landing\AppController@thanks')->name('landing.thanks.ua');
 Route::get('/404', '\App\Http\Controllers\Landing\AppController@notFound')->name('landing.404');
-Route::get('/contract', '\App\Http\Controllers\Landing\AppController@oferta')->name('landing.contract.ru');
-Route::get('/{car_url}', '\App\Http\Controllers\Landing\AppController@car')->name('landing.car.ru');
+Route::get('/contract', '\App\Http\Controllers\Landing\AppController@oferta')->name('landing.contract.ua');
+Route::get('/{car_url}', '\App\Http\Controllers\Landing\AppController@car')->name('landing.car.ua');
 
 
 
